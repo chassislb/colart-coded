@@ -46,7 +46,7 @@ body {
   color: #333;
 }
 
-.nav-links .active {
+.active {
   border-bottom: 2px solid var(--pink);
 }
 
@@ -70,7 +70,7 @@ body {
 /* HERO */
 .hero {
   padding: 80px 0;
-  background: radial-gradient(circle at top right, #f5f7ff, white);
+  background: #f9f9ff;
 }
 
 .hero-content {
@@ -80,8 +80,7 @@ body {
 }
 
 .hero-text h1 {
-  font-size: 52px;
-  line-height: 1.2;
+  font-size: 50px;
 }
 
 .pink { color: var(--pink); }
@@ -107,25 +106,9 @@ body {
   color: var(--pink);
 }
 
-.intro p {
-  max-width: 600px;
-  margin: auto;
-  color: #666;
-}
-
 /* SERVICES */
 .services {
   padding: 80px 0;
-}
-
-.section-title {
-  text-align: center;
-}
-
-.section-subtitle {
-  text-align: center;
-  margin-bottom: 40px;
-  color: #777;
 }
 
 .services-grid {
@@ -134,17 +117,17 @@ body {
   gap: 20px;
 }
 
-.card {
-  padding: 30px;
+.service-card {
+  background: white;
+  padding: 20px;
   border-radius: 20px;
-  color: white;
   text-align: center;
 }
 
-.card-blue { background: var(--blue); }
-.card-yellow { background: var(--yellow); color: black; }
-.card-green { background: var(--green); }
-.card-pink { background: var(--pink); }
+.service-card img {
+  width: 100%;
+  border-radius: 15px;
+}
 
 /* CTA */
 .cta {
@@ -153,20 +136,34 @@ body {
 
 .cta-content {
   display: flex;
-  align-items: center;
   justify-content: space-between;
-}
-
-.cta-text span {
-  color: var(--pink);
-}
-
-.cta-text p {
-  margin: 20px 0;
-  color: #666;
+  align-items: center;
 }
 
 .cta-image img {
   width: 450px;
-  border-radius: 20px;
+}
+
+/* FOOTER */
+.footer {
+  background: #111;
+  color: white;
+  padding: 50px 0;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer-col a {
+  display: block;
+  color: #ccc;
+  text-decoration: none;
+  margin: 5px 0;
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 20px;
 }
