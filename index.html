@@ -1,209 +1,334 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Colart | Digital Marketing Agency</title>
-
-  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+  <meta
+    name="description"
+    content="Colart is a digital marketing agency helping brands grow through branding, social media, digital marketing, and media production."
+  />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="style.css" />
 </head>
-
 <body>
+  <header class="site-header">
+    <div class="container header-wrap">
+      <a href="index.html" class="logo-link" aria-label="Colart home">
+        <img
+          src="assets/logo/colart-logo-main.webp"
+          alt="Colart logo"
+          class="site-logo"
+        />
+      </a>
 
-<!-- HEADER -->
-<header class="header">
-  <div class="container nav">
-    <img src="assets/logo/colart-logo-main.webp" class="logo">
+      <nav class="main-nav" aria-label="Main navigation">
+        <a href="index.html" class="active">Home</a>
+        <a href="services.html">Services</a>
+        <a href="work.html">Our Work</a>
+        <a href="collaborations.html">Collaborations</a>
+        <a href="terms.html">Terms of Service</a>
+        <a href="reviews.html">Reviews</a>
+        <a href="contact.html">Contact Us</a>
+      </nav>
 
-    <nav class="nav-links">
-      <a class="active">Home</a>
-      <a>About</a>
-      <a>Services</a>
-      <a>Work</a>
-      <a>Contact</a>
-    </nav>
+      <a href="contact.html" class="btn btn-primary">Get a Free Quote</a>
 
-    <a class="btn-gradient">Get a Free Quote</a>
-  </div>
-</header>
+      <button class="menu-toggle" type="button" aria-label="Open menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
 
-<!-- HERO -->
-<section class="hero">
-  <div class="container hero-content">
+  <main>
+    <section class="hero">
+      <div class="hero-blur hero-blur-blue"></div>
+      <div class="hero-blur hero-blur-pink"></div>
+      <div class="hero-blur hero-blur-yellow"></div>
 
-    <div class="hero-text">
-      <h1>
-        We Help Brands <br>
-        <span class="pink">Grow</span> &
-        <span class="green">Thrive</span> Online
-      </h1>
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow">We Create… You Grow!</p>
 
-      <p>
-        Strategic Digital Marketing Solutions That Drive <strong>Real Results.</strong>
-      </p>
+          <h1>
+            We Help Brands
+            <span class="pink">Grow</span> &
+            <span class="green">Thrive</span>
+            Online
+          </h1>
 
-      <div class="hero-buttons">
-        <a class="btn-gradient">Start a Project</a>
-        <a class="btn-blue">View Our Work</a>
+          <p class="hero-text">
+            Elevating brands with creativity & strategy through design,
+            storytelling, and digital marketing that drive real results.
+          </p>
+
+          <div class="hero-actions">
+            <a href="contact.html" class="btn btn-primary">Start a Project</a>
+            <a href="work.html" class="btn btn-secondary">View Our Work</a>
+          </div>
+        </div>
+
+        <div class="hero-media">
+          <div class="hero-shape hero-shape-blue"></div>
+          <div class="hero-shape hero-shape-yellow"></div>
+          <div class="hero-shape hero-shape-pink"></div>
+
+          <img
+            src="assets/images/hero/hero-social-media-team-meeting.jpg"
+            alt="Team discussing social media strategy"
+            class="hero-main-image"
+          />
+
+          <div class="floating-card floating-card-top">
+            <img
+              src="assets/images/hero/hero-woman-laptop-analytics.jpg"
+              alt="Analytics and creative design work"
+            />
+          </div>
+
+          <div class="floating-card floating-card-bottom">
+            <p class="mini-label">Growth</p>
+            <h3>50+ Brands</h3>
+            <span>Lebanon, GCC & beyond</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="welcome-section">
+      <div class="section-curve curve-left"></div>
+      <div class="section-curve curve-right"></div>
+
+      <div class="container section-intro">
+        <p class="section-kicker">
+          Welcome to <span>COLART</span>
+        </p>
+        <h2>Your Trusted Digital Marketing Partner</h2>
+        <p class="section-description">
+          Colart is a digital marketing agency dedicated to adding creativity
+          to your success. We proudly serve over 50 businesses in Lebanon, as
+          well as clients in the GCC and beyond. We specialize in graphic
+          design, content creation, reels production, digital distribution, and
+          comprehensive social media management, building brands from the
+          ground up and driving measurable growth.
+        </p>
+        <p class="section-description narrow">
+          At Colart, we don’t just manage pages. We create stories, craft
+          visuals, and deliver strategies that connect brands with people.
+          Whether you’re launching your business or elevating your online
+          presence, Colart is your trusted partner for creative marketing that
+          truly makes an impact.
+        </p>
+      </div>
+    </section>
+
+    <section class="services-section">
+      <div class="container">
+        <div class="section-intro">
+          <h2>Our Services</h2>
+          <p class="section-subtitle">
+            Results-driven digital marketing solutions built around creativity,
+            content, visibility, and growth.
+          </p>
+        </div>
+
+        <div class="services-grid">
+          <article class="service-card">
+            <div class="service-image-wrap">
+              <img
+                src="assets/images/hero/hero-marketing-planning-desk.jpg"
+                alt="Brand identity and planning"
+                class="service-image"
+              />
+            </div>
+            <div class="service-body">
+              <h3>Brand Identity</h3>
+              <p class="service-tag">Logos & Packaging</p>
+              <p>
+                Build a recognizable visual identity that gives your brand a
+                clear voice and stronger presence.
+              </p>
+              <a href="services.html" class="service-btn btn-blue">Learn More</a>
+            </div>
+          </article>
+
+          <article class="service-card">
+            <div class="service-image-wrap">
+              <img
+                src="assets/images/hero/hero-social-media-apps.jpg"
+                alt="Social media management and content"
+                class="service-image"
+              />
+            </div>
+            <div class="service-body">
+              <h3>Social Media Management</h3>
+              <p class="service-tag">Content & Growth</p>
+              <p>
+                Create engaging content, grow your audience, and maintain a
+                polished and consistent online presence.
+              </p>
+              <a href="services.html" class="service-btn btn-yellow">Learn More</a>
+            </div>
+          </article>
+
+          <article class="service-card">
+            <div class="service-image-wrap">
+              <img
+                src="assets/images/hero/hero-chart-presentation-meeting.jpg"
+                alt="Digital marketing ads and analytics"
+                class="service-image"
+              />
+            </div>
+            <div class="service-body">
+              <h3>Digital Marketing</h3>
+              <p class="service-tag">Ads & Analytics</p>
+              <p>
+                Reach the right people with smarter campaigns, stronger
+                targeting, and measurable performance.
+              </p>
+              <a href="services.html" class="service-btn btn-green">Learn More</a>
+            </div>
+          </article>
+
+          <article class="service-card">
+            <div class="service-image-wrap">
+              <img
+                src="assets/images/hero/hero-woman-laptop-analytics.jpg"
+                alt="Creative media production"
+                class="service-image"
+              />
+            </div>
+            <div class="service-body">
+              <h3>Media Production</h3>
+              <p class="service-tag">Photo & Video</p>
+              <p>
+                Produce polished visual content that helps your brand stand out
+                across digital channels.
+              </p>
+              <a href="services.html" class="service-btn btn-pink">Learn More</a>
+            </div>
+          </article>
+        </div>
+
+        <div class="section-link-wrap">
+          <a href="services.html" class="btn btn-secondary">Check All Services</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="portfolio-highlight">
+      <div class="container portfolio-grid">
+        <div class="portfolio-copy">
+          <p class="section-kicker">Our Work</p>
+          <h2>Our work speaks for itself</h2>
+          <p>
+            From hospitality to lifestyle and retail, we help businesses build
+            better brand presence through visual storytelling, strategy, and
+            digital execution.
+          </p>
+
+          <ul class="portfolio-list">
+            <li>Brand building from the ground up</li>
+            <li>Creative execution that fits each business</li>
+            <li>Consistent marketing across platforms</li>
+          </ul>
+
+          <a href="work.html" class="btn btn-primary">Check Our Work</a>
+        </div>
+
+        <div class="portfolio-image-card">
+          <img
+            src="assets/images/hero/hero-analytics-team-office.webp"
+            alt="Analytics dashboard and team strategy"
+          />
+        </div>
+      </div>
+    </section>
+
+    <section class="cta-section">
+      <div class="container cta-box">
+        <div class="cta-text">
+          <h2>
+            Ready to grow your brand with
+            <span>creative marketing that performs?</span>
+          </h2>
+          <p>
+            Let’s turn your business into a stronger, more visible, and more
+            memorable brand.
+          </p>
+        </div>
+
+        <div class="cta-actions">
+          <a href="contact.html" class="btn btn-primary">Contact Us</a>
+          <a href="reviews.html" class="btn btn-secondary">See Reviews</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <img
+          src="assets/logo/colart-logo-main.webp"
+          alt="Colart logo"
+          class="footer-logo"
+        />
+        <p>We create… you grow.</p>
+      </div>
+
+      <div class="footer-links">
+        <h4>Pages</h4>
+        <a href="index.html">Home</a>
+        <a href="services.html">Services</a>
+        <a href="work.html">Our Work</a>
+        <a href="collaborations.html">Collaborations</a>
+        <a href="reviews.html">Reviews</a>
+        <a href="terms.html">Terms of Service</a>
+        <a href="contact.html">Contact Us</a>
+      </div>
+
+      <div class="footer-contact">
+        <h4>Your Contact</h4>
+        <p>info@colartlb.com</p>
+        <p>+961 70 64 94 23</p>
+        <p>+961 81 04 25 12</p>
+      </div>
+
+      <div class="footer-social">
+        <h4>Follow</h4>
+        <a href="#">Facebook</a>
+        <a href="#">Instagram</a>
+        <a href="#">Threads</a>
+        <a href="#">Snapchat</a>
+        <a href="#">TikTok</a>
+        <a href="#">YouTube</a>
       </div>
     </div>
 
-    <div class="hero-image">
-      <img src="assets/images/hero/hero-social-media-team-meeting.jpg">
-    </div>
-
-  </div>
-</section>
-
-<!-- INTRO -->
-<section class="intro">
-  <div class="container center">
-
-    <h3>Welcome to <span>COLART</span></h3>
-    <h2>Your Trusted Digital Marketing Partner</h2>
-
-    <p>
-      Colart is a creative digital marketing agency focused on helping brands grow through strategy,
-      content, and design. We combine creativity with data to deliver real business results.
-    </p>
-
-  </div>
-</section>
-
-<!-- SERVICES -->
-<section class="services">
-  <div class="container">
-
-    <h2 class="section-title">Results-Driven Digital Marketing Agency</h2>
-    <p class="section-subtitle">Trusted by 50+ leading brands in Lebanon & GCC</p>
-
-    <div class="services-grid">
-
-      <div class="service-card">
-        <img src="assets/images/services/hero-marketing-planning-desk.jpg">
-        <h3>Digital Strategy</h3>
-        <p>Plan, structure, and execute marketing strategies that actually convert.</p>
-      </div>
-
-      <div class="service-card">
-        <img src="assets/images/services/hero-social-media-apps.jpg">
-        <h3>Social Media Marketing</h3>
-        <p>Grow your presence with engaging content and consistent branding.</p>
-      </div>
-
-      <div class="service-card">
-        <img src="assets/images/services/hero-chart-presentation-meeting.jpg">
-        <h3>SEO Services</h3>
-        <p>Increase visibility, rankings, and organic traffic.</p>
-      </div>
-
-      <div class="service-card">
-        <img src="assets/images/services/hero-woman-laptop-analytics.jpg">
-        <h3>Creative Design</h3>
-        <p>Build strong visuals that elevate your brand identity.</p>
-      </div>
-
-    </div>
-
-  </div>
-</section>
-
-<!-- VALUE SECTION -->
-<section class="value">
-  <div class="container value-content">
-
-    <div class="value-text">
-      <h2>
-        Elevate Your Brand with
-        <span>Innovative Digital Marketing</span>
-      </h2>
-
-      <p>
-        We help businesses grow with strategic campaigns, creative execution, and measurable results.
-      </p>
-
-      <a class="btn-gradient">Get Started</a>
-    </div>
-
-    <div class="value-image">
-      <img src="assets/images/hero/hero-analytics-team-office.webp">
-    </div>
-
-  </div>
-</section>
-
-<!-- WHY CHOOSE US -->
-<section class="why">
-  <div class="container center">
-
-    <h2>Why Choose Colart</h2>
-
-    <div class="why-grid">
-      <div>
-        <h4>Creative Approach</h4>
-        <p>We blend creativity with strategy.</p>
-      </div>
-
-      <div>
-        <h4>Data-Driven</h4>
-        <p>Every decision is backed by data.</p>
-      </div>
-
-      <div>
-        <h4>Real Results</h4>
-        <p>We focus on growth and performance.</p>
+    <div class="footer-bottom">
+      <div class="container">
+        <p>© 2026 Colart Digital Marketing Agency. All Rights Reserved.</p>
       </div>
     </div>
+  </footer>
 
-  </div>
-</section>
+  <script>
+    const menuToggle = document.querySelector('.menu-toggle');
+    const mainNav = document.querySelector('.main-nav');
 
-<!-- CTA -->
-<section class="cta">
-  <div class="container center">
-    <h2>Let’s Grow Your Brand Together</h2>
-    <a class="btn-gradient">Contact Us</a>
-  </div>
-</section>
-
-<!-- FOOTER -->
-<footer class="footer">
-
-  <div class="container footer-content">
-
-    <div>
-      <img src="assets/logo/colart-logo-main.webp" class="footer-logo">
-      <p>We create… you grow.</p>
-    </div>
-
-    <div>
-      <h4>Company</h4>
-      <a>About</a>
-      <a>Services</a>
-      <a>Work</a>
-      <a>Contact</a>
-    </div>
-
-    <div>
-      <h4>Legal</h4>
-      <a>Terms</a>
-      <a>Privacy</a>
-    </div>
-
-    <div>
-      <h4>Contact</h4>
-      <p>info@colartlb.com</p>
-      <p>Lebanon</p>
-    </div>
-
-  </div>
-
-  <div class="footer-bottom">
-    © 2026 Colart. All rights reserved.
-  </div>
-
-</footer>
-
+    if (menuToggle && mainNav) {
+      menuToggle.addEventListener('click', () => {
+        mainNav.classList.toggle('show');
+      });
+    }
+  </script>
 </body>
 </html>
