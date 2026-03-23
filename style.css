@@ -878,3 +878,43 @@ a {
 .menu-toggle.active span:nth-child(3) {
   transform: translateY(-7px) rotate(-45deg);
 }
+
+/* SOCIAL ICONS */
+
+.social-icons {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-top: 10px;
+}
+
+.social-icons a {
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.9);
+  border: 1px solid rgba(99,48,130,0.08);
+  color: var(--text-dark);
+  font-size: 18px;
+  transition: all 0.3s ease;
+}
+
+/* Hover colors based on your brand */
+
+.social-icons a:hover {
+  transform: translateY(-3px);
+  color: white;
+}
+
+/* Individual hover colors */
+
+.social-icons a:nth-child(1):hover { background: #1877F2; } /* Facebook */
+.social-icons a:nth-child(2):hover { background: #C91780; } /* Instagram */
+.social-icons a:nth-child(3):hover { background: #000000; } /* Threads */
+.social-icons a:nth-child(4):hover { background: #FFFC00; color:#000; } /* Snapchat */
+.social-icons a:nth-child(5):hover { background: #000000; } /* TikTok */
+.social-icons a:nth-child(6):hover { background: #FF0000; } /* YouTube */
+.social-icons a:nth-child(7):hover { background: #25D366; } /* WhatsApp */
