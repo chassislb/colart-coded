@@ -113,6 +113,7 @@ a {
   background: var(--text-dark);
   margin: 5px auto;
   border-radius: 999px;
+  transition: 0.25s ease;
 }
 
 /* Buttons */
@@ -434,6 +435,9 @@ a {
 }
 
 .service-card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
   background: rgba(255, 255, 255, 0.92);
   border: 1px solid var(--border-soft);
   border-radius: 28px;
@@ -459,25 +463,36 @@ a {
 }
 
 .service-body {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
   padding: 20px 20px 22px;
 }
 
 .service-body h3 {
   font-size: 27px;
-  margin-bottom: 8px;
   line-height: 1.15;
+  margin-bottom: 8px;
+  min-height: 64px;
 }
 
 .service-tag {
   color: var(--purple);
   font-weight: 800;
   margin-bottom: 12px;
+  min-height: 56px;
 }
 
 .service-body p:last-of-type {
   color: var(--text-body);
   line-height: 1.7;
   margin-bottom: 18px;
+  min-height: 145px;
+}
+
+.service-btn {
+  margin-top: auto;
+  align-self: flex-start;
 }
 
 .section-link-wrap {
@@ -844,6 +859,12 @@ a {
   .floating-card-bottom h3 {
     font-size: 24px;
   }
+
+  .service-body h3,
+  .service-tag,
+  .service-body p:last-of-type {
+    min-height: unset;
+  }
 }
 
 .menu-toggle.active span:nth-child(1) {
@@ -856,8 +877,4 @@ a {
 
 .menu-toggle.active span:nth-child(3) {
   transform: translateY(-7px) rotate(-45deg);
-}
-
-.menu-toggle span {
-  transition: 0.25s ease;
 }
