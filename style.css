@@ -52,25 +52,23 @@ body {
 
 /* BUTTONS */
 .btn-gradient {
-  padding: 12px 22px;
+  padding: 12px 25px;
   border-radius: 30px;
   background: linear-gradient(135deg, var(--pink), var(--purple));
   color: white;
-  text-decoration: none;
 }
 
 .btn-blue {
-  padding: 12px 22px;
+  padding: 12px 25px;
   border-radius: 30px;
   background: linear-gradient(135deg, var(--blue), var(--green2));
   color: white;
-  text-decoration: none;
 }
 
 /* HERO */
 .hero {
   padding: 80px 0;
-  background: #f9f9ff;
+  background: linear-gradient(180deg, #f9fbff, white);
 }
 
 .hero-content {
@@ -80,7 +78,7 @@ body {
 }
 
 .hero-text h1 {
-  font-size: 50px;
+  font-size: 52px;
 }
 
 .pink { color: var(--pink); }
@@ -122,6 +120,7 @@ body {
   padding: 20px;
   border-radius: 20px;
   text-align: center;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.05);
 }
 
 .service-card img {
@@ -148,7 +147,7 @@ body {
 .footer {
   background: #111;
   color: white;
-  padding: 50px 0;
+  padding: 60px 0;
 }
 
 .footer-content {
@@ -159,7 +158,6 @@ body {
 .footer-col a {
   display: block;
   color: #ccc;
-  text-decoration: none;
   margin: 5px 0;
 }
 
