@@ -244,8 +244,12 @@ a {
   color: var(--green);
 }
 
+.hero-copy .blue {
+  color: var(--blue);
+}
+
 .hero-text {
-  font-size: 24px;
+  font-size: 20px;
   line-height: 1.55;
   color: var(--text-body);
   max-width: 580px;
