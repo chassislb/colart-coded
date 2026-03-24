@@ -8,7 +8,6 @@
 
   --text-dark: #1f2340;
   --text-body: #5f667a;
-  --bg-soft: #fcfbff;
   --white: #ffffff;
   --border-soft: rgba(99, 48, 130, 0.08);
   --shadow-soft: 0 18px 45px rgba(73, 44, 115, 0.11);
@@ -186,7 +185,7 @@ a {
 /* Hero */
 .hero {
   position: relative;
-  padding: 76px 0 44px;
+  padding: 76px 0 72px;
   overflow: hidden;
 }
 
@@ -267,6 +266,35 @@ a {
   display: flex;
   gap: 14px;
   flex-wrap: wrap;
+  margin-bottom: 22px;
+}
+
+.hero-trust {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.trust-pill {
+  background: rgba(255, 255, 255, 0.9);
+  border: 1px solid var(--border-soft);
+  border-radius: 18px;
+  padding: 12px 16px;
+  min-width: 145px;
+  box-shadow: var(--shadow-soft);
+}
+
+.trust-pill strong {
+  display: block;
+  font-size: 18px;
+  margin-bottom: 4px;
+  color: var(--text-dark);
+}
+
+.trust-pill span {
+  font-size: 13px;
+  color: var(--text-body);
+  font-weight: 700;
 }
 
 .hero-media {
@@ -366,37 +394,6 @@ a {
   font-weight: 800;
 }
 
-/* Trust strip */
-.trust-strip {
-  padding: 10px 0 36px;
-}
-
-.trust-strip-wrap {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 16px;
-}
-
-.trust-item {
-  background: rgba(255, 255, 255, 0.92);
-  border: 1px solid var(--border-soft);
-  border-radius: 22px;
-  padding: 20px 22px;
-  box-shadow: var(--shadow-soft);
-}
-
-.trust-item strong {
-  display: block;
-  font-size: 18px;
-  margin-bottom: 6px;
-}
-
-.trust-item span {
-  color: var(--text-body);
-  font-size: 15px;
-  line-height: 1.6;
-}
-
 /* Shared sections */
 .section-intro {
   text-align: center;
@@ -430,7 +427,7 @@ a {
 
 .welcome-section {
   position: relative;
-  padding: 90px 0 86px;
+  padding: 86px 0 96px;
   overflow: hidden;
 }
 
@@ -456,7 +453,7 @@ a {
 
 /* Services */
 .services-section {
-  padding: 10px 0 96px;
+  padding: 0 0 96px;
 }
 
 .services-grid {
@@ -532,11 +529,6 @@ a {
   margin-top: 34px;
 }
 
-/* Who section */
-.who-section {
-  padding: 0 0 96px;
-}
-
 /* Portfolio */
 .portfolio-highlight {
   padding: 0 0 96px;
@@ -598,77 +590,9 @@ a {
   box-shadow: 0 24px 60px rgba(73, 44, 115, 0.14);
 }
 
-/* Proof section */
-.proof-section {
+/* Why */
+.why-section {
   padding: 0 0 96px;
-}
-
-.proof-box {
-  display: grid;
-  grid-template-columns: 0.9fr 1.1fr;
-  gap: 24px;
-  background: linear-gradient(135deg, rgba(247, 244, 255, 0.96), rgba(255, 255, 255, 0.96));
-  border: 1px solid var(--border-soft);
-  border-radius: 34px;
-  padding: 34px;
-  box-shadow: var(--shadow-soft);
-}
-
-.proof-copy h2 {
-  font-size: clamp(30px, 4vw, 46px);
-  line-height: 1.12;
-  margin-bottom: 14px;
-  letter-spacing: -0.03em;
-}
-
-.proof-copy p {
-  color: var(--text-body);
-  font-size: 18px;
-  line-height: 1.8;
-}
-
-.proof-points {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 16px;
-}
-
-.proof-point {
-  background: rgba(255, 255, 255, 0.9);
-  border: 1px solid var(--border-soft);
-  border-radius: 22px;
-  padding: 22px;
-}
-
-.proof-point h3 {
-  font-size: 21px;
-  margin-bottom: 10px;
-}
-
-.proof-point p {
-  color: var(--text-body);
-  line-height: 1.75;
-}
-
-/* Process */
-.process-section {
-  padding: 0 0 96px;
-}
-
-.process-grid {
-  margin-top: 34px;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 22px;
-}
-
-.process-card,
-.why-card {
-  background: rgba(255, 255, 255, 0.95);
-  border: 1px solid var(--border-soft);
-  border-radius: 24px;
-  padding: 28px 24px;
-  box-shadow: var(--shadow-soft);
 }
 
 .why-grid {
@@ -678,26 +602,19 @@ a {
   gap: 22px;
 }
 
-.process-number {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 48px;
-  height: 48px;
-  border-radius: 50%;
-  background: linear-gradient(135deg, rgba(201, 23, 128, 0.12), rgba(93, 160, 189, 0.16));
-  color: var(--purple);
-  font-weight: 900;
-  margin-bottom: 16px;
+.why-card {
+  background: rgba(255, 255, 255, 0.95);
+  border: 1px solid var(--border-soft);
+  border-radius: 24px;
+  padding: 28px 24px;
+  box-shadow: var(--shadow-soft);
 }
 
-.process-card h3,
 .why-card h3 {
   font-size: 24px;
   margin-bottom: 12px;
 }
 
-.process-card p,
 .why-card p {
   color: var(--text-body);
   line-height: 1.75;
@@ -949,13 +866,7 @@ a {
     grid-template-columns: repeat(2, 1fr);
   }
 
-  .trust-strip-wrap,
-  .why-grid,
-  .process-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .proof-box {
+  .why-grid {
     grid-template-columns: 1fr;
   }
 }
@@ -974,6 +885,7 @@ a {
   }
 
   .hero-actions,
+  .hero-trust,
   .cta-actions {
     justify-content: center;
   }
@@ -1035,10 +947,8 @@ a {
 
   .welcome-section,
   .services-section,
-  .who-section,
   .portfolio-highlight,
-  .proof-section,
-  .process-section,
+  .why-section,
   .cta-section {
     padding-bottom: 72px;
   }
@@ -1053,7 +963,6 @@ a {
   .hero-copy h1,
   .section-intro h2,
   .portfolio-copy h2,
-  .proof-copy h2,
   .cta-text h2 {
     font-size: 36px;
   }
@@ -1062,7 +971,6 @@ a {
   .section-description,
   .section-subtitle,
   .portfolio-copy p,
-  .proof-copy p,
   .cta-text p {
     font-size: 16px;
   }
@@ -1072,7 +980,6 @@ a {
   }
 
   .portfolio-grid,
-  .proof-box,
   .cta-box {
     padding: 24px;
   }
@@ -1106,6 +1013,10 @@ a {
 
   .floating-card-bottom h3 {
     font-size: 24px;
+  }
+
+  .trust-pill {
+    width: 100%;
   }
 
   .service-body h3,
