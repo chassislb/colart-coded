@@ -185,7 +185,7 @@ a {
 /* Hero */
 .hero {
   position: relative;
-  padding: 76px 0 72px;
+  padding: 58px 0 58px;
   overflow: hidden;
 }
 
@@ -239,11 +239,11 @@ a {
 }
 
 .hero-copy h1 {
-  font-size: clamp(42px, 6vw, 72px);
-  line-height: 0.98;
-  letter-spacing: -0.04em;
-  margin-bottom: 22px;
-  max-width: 700px;
+  font-size: clamp(38px, 5vw, 62px);
+  line-height: 1.02;
+  letter-spacing: -0.035em;
+  margin-bottom: 18px;
+  max-width: 680px;
 }
 
 .hero-copy .pink {
@@ -258,55 +258,26 @@ a {
   font-size: 20px;
   line-height: 1.65;
   color: var(--text-body);
-  max-width: 590px;
-  margin-bottom: 28px;
+  max-width: 540px;
+  margin-bottom: 26px;
 }
 
 .hero-actions {
   display: flex;
   gap: 14px;
   flex-wrap: wrap;
-  margin-bottom: 22px;
-}
-
-.hero-trust {
-  display: flex;
-  gap: 12px;
-  flex-wrap: wrap;
-}
-
-.trust-pill {
-  background: rgba(255, 255, 255, 0.9);
-  border: 1px solid var(--border-soft);
-  border-radius: 18px;
-  padding: 12px 16px;
-  min-width: 145px;
-  box-shadow: var(--shadow-soft);
-}
-
-.trust-pill strong {
-  display: block;
-  font-size: 18px;
-  margin-bottom: 4px;
-  color: var(--text-dark);
-}
-
-.trust-pill span {
-  font-size: 13px;
-  color: var(--text-body);
-  font-weight: 700;
 }
 
 .hero-media {
   position: relative;
-  min-height: 560px;
+  min-height: 520px;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
 .hero-main-image {
-  width: min(100%, 560px);
+  width: min(100%, 540px);
   border-radius: 30px;
   position: relative;
   z-index: 5;
@@ -319,28 +290,28 @@ a {
 }
 
 .hero-shape-blue {
-  width: 280px;
-  height: 180px;
+  width: 260px;
+  height: 170px;
   background: linear-gradient(135deg, rgba(93, 160, 189, 0.8), rgba(93, 160, 189, 0.15));
-  top: 36px;
-  right: 90px;
+  top: 44px;
+  right: 88px;
   transform: rotate(-18deg);
 }
 
 .hero-shape-yellow {
-  width: 260px;
-  height: 260px;
+  width: 230px;
+  height: 230px;
   background: radial-gradient(circle, rgba(238, 232, 64, 0.85), rgba(238, 232, 64, 0.2));
-  bottom: 68px;
-  left: 50px;
+  bottom: 62px;
+  left: 58px;
 }
 
 .hero-shape-pink {
-  width: 200px;
-  height: 90px;
+  width: 180px;
+  height: 84px;
   background: linear-gradient(90deg, rgba(201, 23, 128, 0.9), rgba(201, 23, 128, 0.25));
-  right: 62px;
-  bottom: 32px;
+  right: 66px;
+  bottom: 36px;
   transform: skew(-25deg);
   border-radius: 18px;
 }
@@ -348,7 +319,7 @@ a {
 .floating-card {
   position: absolute;
   z-index: 10;
-  background: rgba(255, 255, 255, 0.9);
+  background: rgba(255, 255, 255, 0.92);
   backdrop-filter: blur(12px);
   border: 1px solid rgba(99, 48, 130, 0.08);
   border-radius: 22px;
@@ -356,8 +327,8 @@ a {
 }
 
 .floating-card-top {
-  width: 220px;
-  top: 52px;
+  width: 210px;
+  top: 48px;
   left: 18px;
   padding: 10px;
 }
@@ -370,20 +341,20 @@ a {
 }
 
 .floating-card-bottom {
-  left: -4px;
-  bottom: 116px;
-  min-width: 195px;
-  padding: 18px 20px;
+  right: 8px;
+  top: 110px;
+  min-width: 245px;
+  padding: 20px 24px;
 }
 
 .mini-label {
   color: var(--text-body);
   font-size: 14px;
-  margin-bottom: 4px;
+  margin-bottom: 6px;
 }
 
 .floating-card-bottom h3 {
-  font-size: 30px;
+  font-size: 28px;
   color: var(--text-dark);
   margin-bottom: 4px;
 }
@@ -885,13 +856,13 @@ a {
   }
 
   .hero-actions,
-  .hero-trust,
   .cta-actions {
     justify-content: center;
   }
 
   .hero-media {
     min-height: 460px;
+    margin-top: 12px;
   }
 
   .footer-top {
@@ -936,13 +907,16 @@ a {
 
   .floating-card-top {
     width: 170px;
-    top: 16px;
+    top: 18px;
     left: 0;
   }
 
   .floating-card-bottom {
-    left: 0;
-    bottom: 38px;
+    right: 0;
+    top: auto;
+    bottom: 34px;
+    min-width: 210px;
+    padding: 16px 18px;
   }
 
   .welcome-section,
@@ -985,7 +959,7 @@ a {
   }
 
   .hero-media {
-    min-height: 350px;
+    min-height: 330px;
   }
 
   .hero-shape-blue {
@@ -1008,15 +982,17 @@ a {
   }
 
   .floating-card-top {
-    width: 140px;
+    display: none;
+  }
+
+  .floating-card-bottom {
+    right: 10px;
+    bottom: 12px;
+    min-width: 180px;
   }
 
   .floating-card-bottom h3 {
     font-size: 24px;
-  }
-
-  .trust-pill {
-    width: 100%;
   }
 
   .service-body h3,
