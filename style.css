@@ -135,8 +135,16 @@ a {
 }
 
 .btn-primary {
-  color: var(--white);
-  background: linear-gradient(90deg, var(--pink) 0%, #d43dba 35%, var(--blue) 100%);
+  background: var(--purple);
+  color: white;
+  border: none;
+  transition: 0.25s ease;
+}
+
+/* Hover (important, don’t skip this) */
+.btn-primary:hover {
+  background: #4e2568; /* slightly darker purple */
+  transform: translateY(-2px);
 }
 
 .btn-secondary {
