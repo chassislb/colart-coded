@@ -197,7 +197,8 @@ a {
 }
 
 .btn-yellow {
-  background: linear-gradient(90deg, #d6b92d, #e2a93a);
+  color: white;
+  background: linear-gradient(90deg, #f0d94a, #d89e2b);
 }
 
 .btn-green {
