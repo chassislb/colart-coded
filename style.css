@@ -187,27 +187,24 @@ a {
   font-weight: 800;
   box-shadow: 0 8px 22px rgba(82, 71, 120, 0.14);
   border: none;
+  color: white;
 }
 
 /* Individual colors */
 
 .btn-blue {
-  color: white;
   background: linear-gradient(90deg, var(--blue), #4ec1f1);
 }
 
 .btn-yellow {
-  color: #3f3d12;
-  background: linear-gradient(90deg, var(--yellow), #ffcc47);
+  background: linear-gradient(90deg, #d6b92d, #e2a93a);
 }
 
 .btn-green {
-  color: white;
   background: linear-gradient(90deg, var(--green2), var(--green));
 }
 
 .btn-pink {
-  color: white;
   background: linear-gradient(90deg, var(--pink), #f04db9);
 }
 
