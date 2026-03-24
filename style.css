@@ -138,7 +138,7 @@ a {
   background: var(--purple);
   color: white;
   border: none;
-  transition: 0.25s ease;
+  box-shadow: 0 10px 25px rgba(99, 48, 130, 0.25);
 }
 
 /* Hover (important, don’t skip this) */
