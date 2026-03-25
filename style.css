@@ -1351,3 +1351,130 @@ a {
 .social-icons a:nth-child(5):hover { background: #000000; }
 .social-icons a:nth-child(6):hover { background: #FF0000; }
 .social-icons a:nth-child(7):hover { background: #25D366; }
+
+/* OUR WORK PAGE EXTRA STYLES */
+.logo-showcase-section {
+  padding: 0 0 96px;
+}
+
+.logo-wall {
+  margin-top: 38px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 22px;
+}
+
+.logo-card {
+  min-height: 180px;
+  background: rgba(255, 255, 255, 0.95);
+  border: 1px solid var(--border-soft);
+  border-radius: 28px;
+  padding: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: var(--shadow-soft);
+  transition: transform 0.28s ease, box-shadow 0.28s ease;
+}
+
+.logo-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 26px 55px rgba(73, 44, 115, 0.16);
+}
+
+.logo-card img {
+  max-width: 100%;
+  max-height: 88px;
+  object-fit: contain;
+  display: block;
+}
+
+.projects-showcase-section {
+  padding: 0 0 96px;
+}
+
+.projects-grid {
+  margin-top: 38px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+}
+
+.project-card {
+  background: rgba(255, 255, 255, 0.95);
+  border: 1px solid var(--border-soft);
+  border-radius: 28px;
+  overflow: hidden;
+  box-shadow: var(--shadow-soft);
+  transition: transform 0.28s ease, box-shadow 0.28s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 26px 55px rgba(73, 44, 115, 0.16);
+}
+
+.project-image {
+  width: 100%;
+  aspect-ratio: 1.08 / 0.82;
+  object-fit: cover;
+  display: block;
+}
+
+.project-body {
+  padding: 22px 22px 24px;
+}
+
+.project-category {
+  display: inline-block;
+  margin-bottom: 10px;
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--purple);
+}
+
+.project-body h3 {
+  font-size: 24px;
+  line-height: 1.2;
+  margin-bottom: 10px;
+}
+
+.project-body p {
+  color: var(--text-body);
+  line-height: 1.75;
+}
+
+@media (max-width: 1100px) {
+  .logo-wall {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .projects-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 840px) {
+  .logo-wall,
+  .projects-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .logo-wall,
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .logo-card {
+    min-height: 150px;
+    padding: 22px;
+  }
+
+  .project-body h3 {
+    font-size: 22px;
+  }
+}
