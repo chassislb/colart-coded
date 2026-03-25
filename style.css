@@ -139,9 +139,15 @@ a {
 
 /* ================= PRIMARY (GRADIENT - HERO BUTTON) ================= */
 
+/* PRIMARY BUTTON (START A PROJECT - PINK) */
 .btn-primary {
   color: white;
-  background: linear-gradient(90deg, var(--pink), var(--blue));
+  background: var(--pink);
+  box-shadow: 0 10px 25px rgba(201, 23, 128, 0.25);
+}
+
+.btn-primary:hover {
+  background: #a8146a; /* darker pink */
 }
 
 .btn-primary:hover {
@@ -162,9 +168,15 @@ a {
 
 /* ================= SECONDARY ================= */
 
+/* SECONDARY BUTTON (VIEW OUR WORK - BLUE) */
 .btn-secondary {
   color: white;
-  background: linear-gradient(90deg, var(--blue), #58b5ea);
+  background: var(--blue);
+  box-shadow: 0 10px 25px rgba(93, 160, 189, 0.25);
+}
+
+.btn-secondary:hover {
+  background: #4a90a8; /* darker blue */
 }
 
 .btn-secondary:hover {
