@@ -150,9 +150,6 @@ a {
   background: #a8146a; /* darker pink */
 }
 
-.btn-primary:hover {
-  background: linear-gradient(90deg, #b0156d, #4a90a8);
-}
 
 /* ================= HEADER BUTTON (SOLID PURPLE) ================= */
 
@@ -179,9 +176,6 @@ a {
   background: #4a90a8; /* darker blue */
 }
 
-.btn-secondary:hover {
-  background: linear-gradient(90deg, #4c8fa8, #4aa8d8);
-}
 
 /* ================= SMALL BUTTON VARIANTS ================= */
 
