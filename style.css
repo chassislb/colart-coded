@@ -1870,3 +1870,79 @@ body.modal-open {
     height: 42px;
   }
 }
+
+/* ================= OUR WORK PLACEHOLDER GALLERIES ================= */
+
+.work-category-block {
+  margin-top: 44px;
+}
+
+.work-category-block + .work-category-block {
+  margin-top: 56px;
+}
+
+.work-category-head {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 20px;
+  margin-bottom: 22px;
+  flex-wrap: wrap;
+}
+
+.work-category-kicker {
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--pink);
+  margin-bottom: 8px;
+}
+
+.work-category-head h3 {
+  font-size: clamp(28px, 4vw, 40px);
+  line-height: 1.12;
+}
+
+.project-gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+}
+
+.project-gallery-card {
+  background: rgba(255, 255, 255, 0.96);
+  border: 1px solid var(--border-soft);
+  border-radius: 28px;
+  overflow: hidden;
+  box-shadow: var(--shadow-soft);
+  transition: transform 0.28s ease, box-shadow 0.28s ease;
+}
+
+.project-gallery-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 26px 55px rgba(73, 44, 115, 0.16);
+}
+
+.project-gallery-image {
+  width: 100%;
+  aspect-ratio: 1.08 / 0.82;
+  object-fit: cover;
+  display: block;
+}
+
+@media (max-width: 980px) {
+  .project-gallery-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .project-gallery-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .work-category-head {
+    align-items: flex-start;
+  }
+}
