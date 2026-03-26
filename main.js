@@ -182,4 +182,43 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     });
   }
+
+  /* ================= LOGO MODAL ================= */
+  const logoModal = document.getElementById("logoModal");
+  const logoOpenButtons = document.querySelectorAll("[data-logo-open]");
+  const logoCloseButtons = document.querySelectorAll("[data-logo-close]");
+
+  if (logoModal) {
+    const openLogoModal = () => {
+      logoModal.classList.add("active");
+      logoModal.setAttribute("aria-hidden", "false");
+      document.body.classList.add("modal-open");
+    };
+
+    const closeLogoModal = () => {
+      logoModal.classList.remove("active");
+      logoModal.setAttribute("aria-hidden", "true");
+      document.body.classList.remove("modal-open");
+    };
+
+    logoOpenButtons.forEach((button) => {
+      button.addEventListener("click", openLogoModal);
+    });
+
+    logoCloseButtons.forEach((button) => {
+      button.addEventListener("click", closeLogoModal);
+    });
+
+    document.addEventListener("click", (event) => {
+      if (event.target.matches("[data-logo-close]")) {
+        closeLogoModal();
+      }
+    });
+
+    document.addEventListener("keydown", (event) => {
+      if (event.key === "Escape" && logoModal.classList.contains("active")) {
+        closeLogoModal();
+      }
+    });
+  }
 });
