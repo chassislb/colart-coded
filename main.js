@@ -30,7 +30,7 @@ document.addEventListener("DOMContentLoaded", () => {
         <p class="collab-modal-kicker">Collaboration Overview</p>
 
         <div class="collab-modal-brand">
-          <img src="assets/branding/chassis.png" alt="Chassis logo" class="collab-modal-brand-logo" />
+          <img src="branding/chassis.png" alt="Chassis logo" class="collab-modal-brand-logo" />
           <div>
             <h2>Chassis × Colart</h2>
             <p class="collab-modal-lead">
@@ -143,8 +143,10 @@ document.addEventListener("DOMContentLoaded", () => {
     `
   };
 
-  if (collabModal) {
+  if (collabModal && collabModalContent) {
     const openCollabModal = (key) => {
+      if (!collabData[key]) return;
+
       collabModalContent.innerHTML = collabData[key];
       collabModal.classList.add("active");
       collabModal.setAttribute("aria-hidden", "false");
@@ -166,6 +168,12 @@ document.addEventListener("DOMContentLoaded", () => {
 
     collabCloseButtons.forEach((button) => {
       button.addEventListener("click", closeCollabModal);
+    });
+
+    document.addEventListener("click", (event) => {
+      if (event.target.matches("[data-collab-close]")) {
+        closeCollabModal();
+      }
     });
 
     document.addEventListener("keydown", (event) => {
