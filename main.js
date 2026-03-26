@@ -30,7 +30,7 @@ document.addEventListener("DOMContentLoaded", () => {
         <p class="collab-modal-kicker">Collaboration Overview</p>
 
         <div class="collab-modal-brand">
-          <img src="branding/chassis.png" alt="Chassis logo" class="collab-modal-brand-logo" />
+          <img src="assets/branding/chassis.png" alt="Chassis logo" class="collab-modal-brand-logo" />
           <div>
             <h2>Chassis × Colart</h2>
             <p class="collab-modal-lead">
