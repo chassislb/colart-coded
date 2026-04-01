@@ -1108,6 +1108,49 @@ a {
   display: block;
 }
 
+/* VIEW ALL WORK CARD */
+.project-gallery-card-more {
+  border: 1px solid rgba(99, 48, 130, 0.10);
+  cursor: pointer;
+  min-height: 280px;
+  background:
+    radial-gradient(circle at top right, rgba(201, 23, 128, 0.12), transparent 36%),
+    radial-gradient(circle at bottom left, rgba(93, 160, 189, 0.14), transparent 34%),
+    linear-gradient(135deg, rgba(255,255,255,0.98), rgba(248,244,255,0.96));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+}
+
+.project-gallery-card-more:hover {
+  border-color: rgba(201, 23, 128, 0.16);
+}
+
+.project-gallery-more-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  text-align: center;
+}
+
+.project-gallery-more-number {
+  font-size: 28px;
+  font-weight: 900;
+  line-height: 1;
+  color: var(--purple);
+}
+
+.project-gallery-more-text {
+  font-size: 15px;
+  font-weight: 800;
+  color: var(--pink);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  line-height: 1.5;
+}
+
 .work-next-grid {
   margin-top: 38px;
   display: grid;
@@ -1269,6 +1312,220 @@ a {
   display: block;
 }
 
+/* WORK PAGE GALLERY MODALS */
+.gallery-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 1190;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity 0.35s ease, visibility 0.35s ease;
+}
+
+.gallery-modal.active {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+.gallery-modal-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(21, 16, 34, 0.58);
+  backdrop-filter: blur(0px);
+  -webkit-backdrop-filter: blur(0px);
+  transition: background 0.35s ease, backdrop-filter 0.35s ease;
+}
+
+.gallery-modal.active .gallery-modal-overlay {
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  background: rgba(21, 16, 34, 0.62);
+}
+
+.gallery-modal-dialog {
+  position: relative;
+  width: min(1160px, calc(100% - 32px));
+  max-height: calc(100vh - 40px);
+  margin: 20px auto;
+  background: linear-gradient(180deg, #ffffff 0%, #faf7ff 100%);
+  border: 1px solid rgba(99, 48, 130, 0.10);
+  border-radius: 30px;
+  box-shadow: 0 34px 80px rgba(23, 14, 40, 0.24);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transform: translateY(32px) scale(0.965);
+  opacity: 0;
+  transition:
+    transform 0.42s cubic-bezier(0.22, 1, 0.36, 1),
+    opacity 0.32s ease;
+}
+
+.gallery-modal.active .gallery-modal-dialog {
+  transform: translateY(0) scale(1);
+  opacity: 1;
+}
+
+.gallery-modal-close {
+  position: absolute;
+  top: 18px;
+  right: 18px;
+  width: 46px;
+  height: 46px;
+  border: 0;
+  border-radius: 50%;
+  background: rgba(99, 48, 130, 0.08);
+  color: var(--text-dark);
+  font-size: 20px;
+  cursor: pointer;
+  z-index: 2;
+  transition: background 0.25s ease, transform 0.25s ease;
+}
+
+.gallery-modal-close:hover {
+  background: rgba(99, 48, 130, 0.14);
+  transform: rotate(90deg) scale(1.04);
+}
+
+.gallery-modal-head {
+  padding: 34px 34px 20px;
+  border-bottom: 1px solid rgba(99, 48, 130, 0.08);
+}
+
+.gallery-modal-kicker {
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--pink);
+  margin-bottom: 10px;
+}
+
+.gallery-modal-head h2 {
+  font-size: clamp(28px, 4vw, 42px);
+  line-height: 1.12;
+  margin-bottom: 10px;
+}
+
+.gallery-modal-head p {
+  max-width: 760px;
+  color: var(--text-body);
+  line-height: 1.8;
+  font-size: 17px;
+}
+
+.gallery-modal-grid {
+  padding: 26px 34px 34px;
+  overflow-y: auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+}
+
+.gallery-modal-card {
+  background: rgba(255, 255, 255, 0.96);
+  border: 1px solid rgba(99, 48, 130, 0.08);
+  border-radius: 24px;
+  overflow: hidden;
+  transition: transform 0.28s ease, box-shadow 0.28s ease;
+}
+
+.gallery-modal-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 18px 34px rgba(73, 44, 115, 0.08);
+}
+
+.gallery-modal-card img {
+  width: 100%;
+  height: 320px;
+  object-fit: cover;
+  display: block;
+}
+
+/* RESPONSIVE */
+@media (max-width: 1199px) {
+  .work-summary-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .logo-preview-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .logo-modal-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 991px) {
+  .project-gallery-grid,
+  .work-next-grid,
+  .gallery-modal-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .logo-modal-dialog,
+  .gallery-modal-dialog {
+    width: min(100%, calc(100% - 24px));
+  }
+
+  .logo-modal-head,
+  .gallery-modal-head {
+    padding: 28px 26px 18px;
+  }
+
+  .logo-modal-grid,
+  .gallery-modal-grid {
+    padding: 22px 26px 26px;
+  }
+}
+
+@media (max-width: 767px) {
+  .work-summary-grid,
+  .logo-preview-grid,
+  .project-gallery-grid,
+  .work-next-grid,
+  .logo-modal-grid,
+  .gallery-modal-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .work-category-head {
+    align-items: start;
+  }
+
+  .logo-preview-card,
+  .project-gallery-card-more {
+    min-height: 200px;
+  }
+
+  .project-gallery-more-number {
+    font-size: 24px;
+  }
+
+  .logo-modal-dialog,
+  .gallery-modal-dialog {
+    max-height: calc(100vh - 20px);
+    margin: 10px auto;
+    border-radius: 24px;
+  }
+
+  .logo-modal-head h2,
+  .gallery-modal-head h2 {
+    font-size: clamp(24px, 7vw, 34px);
+  }
+
+  .logo-modal-head p,
+  .gallery-modal-head p {
+    font-size: 15px;
+  }
+
+  .gallery-modal-card img {
+    height: 260px;
+  }
+}
 /* =========================================================
    11. COLLABORATIONS PAGE
 ========================================================= */
