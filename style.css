@@ -1103,9 +1103,22 @@ a {
 
 .project-gallery-image {
   width: 100%;
-  aspect-ratio: 1.08 / 0.82;
+  height: 100%;
+  min-height: 280px;
+  max-height: 280px;
   object-fit: cover;
+  object-position: center;
   display: block;
+}
+
+.project-gallery-card {
+  background: rgba(255, 255, 255, 0.96);
+  border: 1px solid var(--border-soft);
+  border-radius: 28px;
+  overflow: hidden;
+  box-shadow: var(--shadow-soft);
+  transition: transform 0.28s ease, box-shadow 0.28s ease;
+  min-height: 280px;
 }
 
 /* VIEW ALL WORK CARD */
