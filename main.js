@@ -18,6 +18,75 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
+    /* ================= TERMS MODAL ================= */
+  const termsModal = document.getElementById("termsModal");
+  const termsOpenButtons = document.querySelectorAll("[data-terms-open]");
+  const termsCloseButtons = document.querySelectorAll("[data-terms-close]");
+
+  if (termsModal) {
+    const openTermsModal = () => {
+      termsModal.classList.add("active");
+      termsModal.setAttribute("aria-hidden", "false");
+      document.body.classList.add("modal-open");
+    };
+
+    const closeTermsModal = () => {
+      termsModal.classList.remove("active");
+      termsModal.setAttribute("aria-hidden", "true");
+      document.body.classList.remove("modal-open");
+    };
+
+    termsOpenButtons.forEach((button) => {
+      button.addEventListener("click", openTermsModal);
+    });
+
+    termsCloseButtons.forEach((button) => {
+      button.addEventListener("click", closeTermsModal);
+    });
+
+    document.addEventListener("click", (event) => {
+      if (event.target.matches("[data-terms-close]")) {
+        closeTermsModal();
+      }
+    });
+
+    document.addEventListener("keydown", (event) => {
+      if (event.key === "Escape" && termsModal.classList.contains("active")) {
+        closeTermsModal();
+      }
+    });
+  }
+
+  /* ================= CONTACT FORM TO EMAIL + WHATSAPP ================= */
+  const contactForm = document.getElementById("contactForm");
+
+  if (contactForm) {
+    contactForm.addEventListener("submit", () => {
+      const fullName = document.getElementById("fullName")?.value.trim() || "";
+      const emailAddress = document.getElementById("emailAddress")?.value.trim() || "";
+      const phoneNumber = document.getElementById("phoneNumber")?.value.trim() || "";
+      const serviceNeeded = document.getElementById("serviceNeeded")?.value.trim() || "";
+      const projectDetails = document.getElementById("projectDetails")?.value.trim() || "";
+
+      const whatsappMessage =
+`New inquiry from the Colart website
+
+Full Name: ${fullName}
+Email Address: ${emailAddress}
+Phone Number: ${phoneNumber}
+Service Needed: ${serviceNeeded}
+
+Project Details:
+${projectDetails}`;
+
+      const whatsappUrl = `https://wa.me/96170649423?text=${encodeURIComponent(whatsappMessage)}`;
+
+      setTimeout(() => {
+        window.open(whatsappUrl, "_blank", "noopener,noreferrer");
+      }, 250);
+    });
+  }
+
   /* ================= COLLABORATION MODAL ================= */
   const collabModal = document.getElementById("collabModal");
   const collabModalContent = document.getElementById("collabModalContent");
