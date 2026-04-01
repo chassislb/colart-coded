@@ -1455,6 +1455,88 @@ a {
   object-fit: cover;
   object-position: center;
 }
+
+@media (max-width: 991px) {
+  .project-gallery-grid,
+  .work-next-grid,
+  .gallery-modal-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .logo-modal-dialog,
+  .gallery-modal-dialog {
+    width: min(100%, calc(100% - 24px));
+  }
+
+  .logo-modal-head,
+  .gallery-modal-head {
+    padding: 28px 26px 18px;
+  }
+
+  .logo-modal-grid,
+  .gallery-modal-grid {
+    padding: 22px 26px 26px;
+  }
+
+  .gallery-modal-card,
+  .gallery-modal-card img {
+    min-height: 220px;
+  }
+}
+
+@media (max-width: 767px) {
+  .work-summary-grid,
+  .logo-preview-grid,
+  .project-gallery-grid,
+  .work-next-grid,
+  .logo-modal-grid,
+  .gallery-modal-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .work-category-head {
+    align-items: start;
+  }
+
+  .logo-preview-card,
+  .project-gallery-card,
+  .project-gallery-card-more {
+    min-height: 220px;
+  }
+
+  .project-gallery-image {
+    min-height: 220px;
+    max-height: 220px;
+  }
+
+  .project-gallery-more-number {
+    font-size: 24px;
+  }
+
+  .logo-modal-dialog,
+  .gallery-modal-dialog {
+    height: calc(100vh - 20px);
+    max-height: calc(100vh - 20px);
+    margin: 10px auto;
+    border-radius: 24px;
+  }
+
+  .logo-modal-head h2,
+  .gallery-modal-head h2 {
+    font-size: clamp(24px, 7vw, 34px);
+  }
+
+  .logo-modal-head p,
+  .gallery-modal-head p {
+    font-size: 15px;
+  }
+
+  .gallery-modal-card,
+  .gallery-modal-card img {
+    min-height: 240px;
+  }
+}
+
 /* =========================================================
    11. COLLABORATIONS PAGE
 ========================================================= */
