@@ -1703,7 +1703,6 @@ a {
   color: var(--pink);
 }
 
-/* SOCIAL SECTION */
 .footer-social-wrap {
   padding: 0 0 34px;
   display: flex;
@@ -1719,45 +1718,82 @@ a {
   flex-wrap: wrap;
 }
 
-/* SOCIAL ICONS */
-.social-icons {
-  display: flex;
-  gap: 14px;
-  flex-wrap: wrap;
-  margin-top: 10px;
+.channel-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  min-height: 48px;
+  padding: 0 18px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, rgba(37, 211, 102, 0.16), rgba(93, 160, 189, 0.14));
+  border: 1px solid rgba(37, 211, 102, 0.22);
+  color: #148a48;
+  font-weight: 800;
+  transition: 0.25s ease;
 }
 
-.social-icons a {
+.channel-pill i {
+  font-size: 18px;
+}
+
+.channel-pill:hover {
+  transform: translateY(-2px);
+  background: linear-gradient(90deg, rgba(37, 211, 102, 0.22), rgba(93, 160, 189, 0.18));
+}
+
+.social-row {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+.social-card {
   width: 54px;
   height: 54px;
   border-radius: 18px;
   display: flex;
   align-items: center;
   justify-content: center;
-  background: rgba(255,255,255,0.75);
-  border: 1px solid rgba(99,48,130,0.08);
+  background: rgba(255, 255, 255, 0.72);
+  border: 1px solid rgba(99, 48, 130, 0.08);
   box-shadow: 0 14px 30px rgba(76, 54, 110, 0.08);
   color: var(--text-dark);
-  font-size: 20px;
-  transition: all 0.28s ease;
+  font-size: 21px;
+  transition: 0.28s ease;
   backdrop-filter: blur(10px);
 }
 
-.social-icons a:hover {
-  transform: translateY(-4px) scale(1.05);
+.social-card:hover {
+  transform: translateY(-4px) scale(1.03);
   color: white;
 }
 
-/* PLATFORM COLORS (fixed order based on your screenshot) */
-.social-icons a:nth-child(1):hover { background: #1877F2; } /* Facebook */
-.social-icons a:nth-child(2):hover { background: linear-gradient(135deg, #C91780, #f77737); } /* Instagram */
-.social-icons a:nth-child(3):hover { background: #000000; } /* Threads */
-.social-icons a:nth-child(4):hover { background: #0A66C2; } /* LinkedIn ✅ FIXED */
-.social-icons a:nth-child(5):hover { background: #FFFC00; color:#111; } /* Snapchat */
-.social-icons a:nth-child(6):hover { background: #000000; } /* TikTok */
-.social-icons a:nth-child(7):hover { background: #FF0000; } /* YouTube */
+.social-card:nth-child(1):hover {
+  background: #1877F2;
+}
 
-/* FOOTER BOTTOM */
+.social-card:nth-child(2):hover {
+  background: linear-gradient(135deg, #C91780, #f77737);
+}
+
+.social-card:nth-child(3):hover {
+  background: #111111;
+}
+
+.social-card:nth-child(4):hover {
+  background: #FFFC00;
+  color: #111111;
+}
+
+.social-card:nth-child(5):hover {
+  background: #111111;
+}
+
+.social-card:nth-child(6):hover {
+  background: #FF0000;
+}
+
 .footer-bottom {
   border-top: 1px solid rgba(99, 48, 130, 0.08);
   padding: 20px 0 28px;
@@ -1768,6 +1804,43 @@ a {
   text-align: center;
   font-size: 15px;
 }
+
+/* EXTRA SOCIAL ICONS */
+.social-icons {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-top: 10px;
+}
+
+.social-icons a {
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.9);
+  border: 1px solid rgba(99,48,130,0.08);
+  color: var(--text-dark);
+  font-size: 18px;
+  transition: all 0.3s ease;
+}
+
+.social-icons a:hover {
+  transform: translateY(-3px);
+  color: white;
+}
+
+.social-icons a:nth-child(1):hover { background: #1877F2; }
+.social-icons a:nth-child(2):hover { background: #C91780; }
+.social-icons a:nth-child(3):hover { background: #000000; }
+.social-icons a:nth-child(4):hover { background: #0A66C2; }
+.social-icons a:nth-child(5):hover { background: #FFFC00; color:#000; }
+.social-icons a:nth-child(6):hover { background: #000000; }
+.social-icons a:nth-child(7):hover { background: #FF0000; }
+.social-icons a:nth-child(8):hover { background: #25D366; }
+
 /* =========================================================
    14. FLOATING WHATSAPP
 ========================================================= */
