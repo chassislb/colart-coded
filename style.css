@@ -1345,22 +1345,15 @@ a {
 .gallery-modal-overlay {
   position: absolute;
   inset: 0;
-  background: rgba(21, 16, 34, 0.58);
-  backdrop-filter: blur(0px);
-  -webkit-backdrop-filter: blur(0px);
-  transition: background 0.35s ease, backdrop-filter 0.35s ease;
-}
-
-.gallery-modal.active .gallery-modal-overlay {
+  background: rgba(21, 16, 34, 0.62);
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
-  background: rgba(21, 16, 34, 0.62);
 }
 
 .gallery-modal-dialog {
   position: relative;
   width: min(1160px, calc(100% - 32px));
-  max-height: calc(100vh - 40px);
+  height: calc(100vh - 40px);
   margin: 20px auto;
   background: linear-gradient(180deg, #ffffff 0%, #faf7ff 100%);
   border: 1px solid rgba(99, 48, 130, 0.10);
@@ -1393,7 +1386,7 @@ a {
   color: var(--text-dark);
   font-size: 20px;
   cursor: pointer;
-  z-index: 2;
+  z-index: 5;
   transition: background 0.25s ease, transform 0.25s ease;
 }
 
@@ -1405,6 +1398,7 @@ a {
 .gallery-modal-head {
   padding: 34px 34px 20px;
   border-bottom: 1px solid rgba(99, 48, 130, 0.08);
+  flex-shrink: 0;
 }
 
 .gallery-modal-kicker {
@@ -1432,9 +1426,11 @@ a {
 .gallery-modal-grid {
   padding: 26px 34px 34px;
   overflow-y: auto;
+  flex: 1;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 18px;
+  align-content: start;
 }
 
 .gallery-modal-card {
@@ -1443,6 +1439,7 @@ a {
   border-radius: 24px;
   overflow: hidden;
   transition: transform 0.28s ease, box-shadow 0.28s ease;
+  min-height: 260px;
 }
 
 .gallery-modal-card:hover {
@@ -1452,92 +1449,11 @@ a {
 
 .gallery-modal-card img {
   width: 100%;
-  height: 320px;
-  object-fit: cover;
+  height: 100%;
+  min-height: 260px;
   display: block;
-}
-
-/* RESPONSIVE */
-@media (max-width: 1199px) {
-  .work-summary-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .logo-preview-grid {
-    grid-template-columns: repeat(3, 1fr);
-  }
-
-  .logo-modal-grid {
-    grid-template-columns: repeat(3, 1fr);
-  }
-}
-
-@media (max-width: 991px) {
-  .project-gallery-grid,
-  .work-next-grid,
-  .gallery-modal-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .logo-modal-dialog,
-  .gallery-modal-dialog {
-    width: min(100%, calc(100% - 24px));
-  }
-
-  .logo-modal-head,
-  .gallery-modal-head {
-    padding: 28px 26px 18px;
-  }
-
-  .logo-modal-grid,
-  .gallery-modal-grid {
-    padding: 22px 26px 26px;
-  }
-}
-
-@media (max-width: 767px) {
-  .work-summary-grid,
-  .logo-preview-grid,
-  .project-gallery-grid,
-  .work-next-grid,
-  .logo-modal-grid,
-  .gallery-modal-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .work-category-head {
-    align-items: start;
-  }
-
-  .logo-preview-card,
-  .project-gallery-card-more {
-    min-height: 200px;
-  }
-
-  .project-gallery-more-number {
-    font-size: 24px;
-  }
-
-  .logo-modal-dialog,
-  .gallery-modal-dialog {
-    max-height: calc(100vh - 20px);
-    margin: 10px auto;
-    border-radius: 24px;
-  }
-
-  .logo-modal-head h2,
-  .gallery-modal-head h2 {
-    font-size: clamp(24px, 7vw, 34px);
-  }
-
-  .logo-modal-head p,
-  .gallery-modal-head p {
-    font-size: 15px;
-  }
-
-  .gallery-modal-card img {
-    height: 260px;
-  }
+  object-fit: cover;
+  object-position: center;
 }
 /* =========================================================
    11. COLLABORATIONS PAGE
