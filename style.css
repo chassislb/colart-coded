@@ -2112,13 +2112,11 @@ footer a {
   color: #36C6F4; /* your blue */
   font-weight: 600;
   text-decoration: none;
-  border-bottom: 1px solid rgba(54, 198, 244, 0.4);
   transition: 0.2s ease;
 }
 
 footer a:hover {
   color: #F3CC31; /* your yellow */
-  border-bottom: 1px solid #F3CC31;
 }
 
 /* EXTRA SOCIAL ICONS */
