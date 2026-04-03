@@ -18,7 +18,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-    /* ================= TERMS MODAL ================= */
+  /* ================= TERMS MODAL ================= */
   const termsModal = document.getElementById("termsModal");
   const termsOpenButtons = document.querySelectorAll("[data-terms-open]");
   const termsCloseButtons = document.querySelectorAll("[data-terms-close]");
@@ -44,14 +44,14 @@ document.addEventListener("DOMContentLoaded", () => {
       button.addEventListener("click", closeTermsModal);
     });
 
-    document.addEventListener("click", (event) => {
-      if (event.target.matches("[data-terms-close]")) {
+    document.addEventListener("keydown", (event) => {
+      if (event.key === "Escape" && termsModal.classList.contains("active")) {
         closeTermsModal();
       }
     });
 
-    document.addEventListener("keydown", (event) => {
-      if (event.key === "Escape" && termsModal.classList.contains("active")) {
+    termsModal.addEventListener("click", (event) => {
+      if (event.target.matches("[data-terms-close]")) {
         closeTermsModal();
       }
     });
@@ -68,8 +68,7 @@ document.addEventListener("DOMContentLoaded", () => {
       const serviceNeeded = document.getElementById("serviceNeeded")?.value.trim() || "";
       const projectDetails = document.getElementById("projectDetails")?.value.trim() || "";
 
-      const whatsappMessage =
-`New inquiry from the Colart website
+      const whatsappMessage = `New inquiry from the Colart website
 
 Full Name: ${fullName}
 Email Address: ${emailAddress}
@@ -239,14 +238,14 @@ ${projectDetails}`;
       button.addEventListener("click", closeCollabModal);
     });
 
-    document.addEventListener("click", (event) => {
-      if (event.target.matches("[data-collab-close]")) {
+    document.addEventListener("keydown", (event) => {
+      if (event.key === "Escape" && collabModal.classList.contains("active")) {
         closeCollabModal();
       }
     });
 
-    document.addEventListener("keydown", (event) => {
-      if (event.key === "Escape" && collabModal.classList.contains("active")) {
+    collabModal.addEventListener("click", (event) => {
+      if (event.target.matches("[data-collab-close]")) {
         closeCollabModal();
       }
     });
@@ -278,16 +277,70 @@ ${projectDetails}`;
       button.addEventListener("click", closeLogoModal);
     });
 
-    document.addEventListener("click", (event) => {
-      if (event.target.matches("[data-logo-close]")) {
-        closeLogoModal();
-      }
-    });
-
     document.addEventListener("keydown", (event) => {
       if (event.key === "Escape" && logoModal.classList.contains("active")) {
         closeLogoModal();
       }
     });
+
+    logoModal.addEventListener("click", (event) => {
+      if (event.target.matches("[data-logo-close]")) {
+        closeLogoModal();
+      }
+    });
   }
+
+  /* ================= GALLERY MODALS ================= */
+  const galleryButtons = document.querySelectorAll("[data-gallery-open]");
+
+  galleryButtons.forEach((button) => {
+    button.addEventListener("click", () => {
+      const modalId = button.getAttribute("data-gallery-open");
+      const modal = document.getElementById(modalId);
+
+      if (!modal) return;
+
+      modal.classList.add("active");
+      modal.setAttribute("aria-hidden", "false");
+      document.body.classList.add("modal-open");
+    });
+  });
+
+  const allGalleryCloseButtons = document.querySelectorAll("[data-gallery-close]");
+
+  allGalleryCloseButtons.forEach((button) => {
+    button.addEventListener("click", () => {
+      const modal = button.closest(".gallery-modal");
+
+      if (!modal) return;
+
+      modal.classList.remove("active");
+      modal.setAttribute("aria-hidden", "true");
+      document.body.classList.remove("modal-open");
+    });
+  });
+
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape") {
+      const activeGallery = document.querySelector(".gallery-modal.active");
+      if (activeGallery) {
+        activeGallery.classList.remove("active");
+        activeGallery.setAttribute("aria-hidden", "true");
+        document.body.classList.remove("modal-open");
+      }
+    }
+  });
+
+  document.querySelectorAll(".gallery-modal").forEach((modal) => {
+    modal.addEventListener("click", (event) => {
+      if (
+        event.target === modal ||
+        event.target.matches("[data-gallery-close]")
+      ) {
+        modal.classList.remove("active");
+        modal.setAttribute("aria-hidden", "true");
+        document.body.classList.remove("modal-open");
+      }
+    });
+  });
 });
