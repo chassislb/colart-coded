@@ -2109,14 +2109,14 @@ a {
 }
 
 footer a {
-  color: #36C6F4; /* your blue */
+  color: #5DA0BD; /* your blue */
   font-weight: 600;
   text-decoration: none;
   transition: 0.2s ease;
 }
 
 footer a:hover {
-  color: #F3CC31; /* your yellow */
+  color: #EEE840; /* your yellow */
 }
 
 /* EXTRA SOCIAL ICONS */
