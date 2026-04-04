@@ -622,166 +622,168 @@ Our work focuses on creating visual systems that make businesses look more profe
   >
     <i class="fa-brands fa-whatsapp"></i>
   </a>
+<!-- Logo Popup Modal -->
+<div class="logo-modal" id="logoModal" aria-hidden="true">
+  <div class="logo-modal-overlay" data-logo-close></div>
 
-  <!-- Logo Popup Modal -->
-  <div class="logo-modal" id="logoModal" aria-hidden="true">
-    <div class="logo-modal-overlay" data-logo-close></div>
+  <div class="logo-modal-dialog" role="dialog" aria-modal="true" aria-label="Logo gallery popup">
+    <button class="logo-modal-close" type="button" data-logo-close aria-label="Close logo gallery">
+      <i class="fa-solid fa-xmark"></i>
+    </button>
 
-    <div class="logo-modal-dialog" role="dialog" aria-modal="true" aria-label="Logo gallery popup">
-      <button class="logo-modal-close" type="button" data-logo-close aria-label="Close logo gallery">
-        <i class="fa-solid fa-xmark"></i>
-      </button>
+    <div class="logo-modal-head">
+      <p class="logo-modal-kicker">Full Gallery</p>
+      <h2>Logo and identity collection</h2>
+      <p>
+        A broader view of logo work created across different businesses, styles, and concepts.
+      </p>
+    </div>
 
-      <div class="logo-modal-head">
-        <p class="logo-modal-kicker">Full Gallery</p>
-        <h2>Logo and identity collection</h2>
-        <p>
-          A broader view of logo work created across different businesses, styles, and concepts.
-        </p>
-      </div>
-
-      <div class="logo-modal-grid">
-        <div class="logo-modal-card"><img src="assets/branding/Atlas.png" alt="Atlas logo" /></div>
-        <div class="logo-modal-card"><img src="assets/branding/3a Rassé.png" alt="3a Rassé logo" /></div>
-        <div class="logo-modal-card"><img src="assets/branding/Alya Salloum.png" alt="Alya Salloum logo" /></div>
-        <div class="logo-modal-card"><img src="assets/branding/Amani.png" alt="Amani logo" /></div>
-        <div class="logo-modal-card"><img src="assets/branding/Braid N Smiles.png" alt="Braid N Smiles logo" /></div>
-        <div class="logo-modal-card"><img src="assets/branding/Brand Boosters.png" alt="Brand Boosters logo" /></div>
-        <div class="logo-modal-card"><img src="assets/branding/CODEGINEERS LOGO.png" alt="Codegineers logo" /></div>
-        <div class="logo-modal-card"><img src="assets/branding/Cabana.png" alt="Cabana logo" /></div>
-        <div class="logo-modal-card"><img src="assets/branding/Fadi.png" alt="Fadi logo" /></div>
-        <div class="logo-modal-card"><img src="assets/branding/caller-tech.png" alt="Caller tech" /></div>
-        <div class="logo-modal-card"><img src="assets/branding/Hayat New.png" alt="Hayat logo" /></div>
-        <div class="logo-modal-card"><img src="assets/branding/LOGO_TUNE.png" alt="Tune logo" /></div>
-        <div class="logo-modal-card"><img src="assets/branding/LSC.png" alt="LSC logo" /></div>
-        <div class="logo-modal-card"><img src="assets/branding/shi-wow.png" alt="Shi wow" /></div>
-        <div class="logo-modal-card"><img src="assets/branding/Logo_La_Fiesta_Transp_bg-01.png" alt="La Fiesta logo" /></div>
-        <div class="logo-modal-card"><img src="assets/branding/MArketing Minds.png" alt="Marketing Minds logo" /></div>
-        <div class="logo-modal-card"><img src="assets/branding/Marionette.png" alt="Marionette logo" /></div>
-        <div class="logo-modal-card"><img src="assets/branding/PBA.png" alt="PBA logo" /></div>
-        <div class="logo-modal-card"><img src="assets/branding/POOL BAR LOGO.png" alt="Pool Bar logo" /></div>
-        <div class="logo-modal-card"><img src="assets/branding/lubby.png" alt="lubby" /></div>
-        <div class="logo-modal-card"><img src="assets/branding/Volume 1.png" alt="Volume 1 logo" /></div>
-        <div class="logo-modal-card"><img src="assets/branding/Waad Logo-Transparent-02.png" alt="Waad logo" /></div>
-        <div class="logo-modal-card"><img src="assets/branding/chassis.png" alt="Chassis logo" /></div>
-        <div class="logo-modal-card"><img src="assets/branding/dessert district.png" alt="Dessert District logo" /></div>
-        <div class="logo-modal-card"><img src="assets/branding/dj nonz.png" alt="DJ Nonz logo" /></div>
-        <div class="logo-modal-card"><img src="assets/branding/hawa batroun.png" alt="Hawa Batroun logo" /></div>
-        <div class="logo-modal-card"><img src="assets/branding/hikaya.png" alt="Hikaya logo" /></div>
-        <div class="logo-modal-card"><img src="assets/branding/jaax.png" alt="Jaax logo" /></div>
-        <div class="logo-modal-card"><img src="assets/branding/jelies.png" alt="Jelies logo" /></div>
-        <div class="logo-modal-card"><img src="assets/branding/miracle d'olive.png" alt="Miracle d'olive logo" /></div>
-        <div class="logo-modal-card"><img src="assets/branding/noon.png" alt="Noon logo" /></div>
-        <div class="logo-modal-card"><img src="assets/branding/sam-hindy.ico" alt="Brand logo" /></div>
-        <div class="logo-modal-card"><img src="assets/branding/siso original.png" alt="Siso original logo" /></div>
-        <div class="logo-modal-card"><img src="assets/branding/siso xmas.png" alt="Siso xmas logo" /></div>
-      </div>
+    <div class="logo-modal-grid">
+      <div class="logo-modal-card"><img src="assets/branding/Atlas.png" alt="Atlas logo" /></div>
+      <div class="logo-modal-card"><img src="assets/branding/3a Rassé.png" alt="3a Rassé logo" /></div>
+      <div class="logo-modal-card"><img src="assets/branding/Alya Salloum.png" alt="Alya Salloum logo" /></div>
+      <div class="logo-modal-card"><img src="assets/branding/Amani.png" alt="Amani logo" /></div>
+      <div class="logo-modal-card"><img src="assets/branding/Braid N Smiles.png" alt="Braid N Smiles logo" /></div>
+      <div class="logo-modal-card"><img src="assets/branding/Brand Boosters.png" alt="Brand Boosters logo" /></div>
+      <div class="logo-modal-card"><img src="assets/branding/CODEGINEERS LOGO.png" alt="Codegineers logo" /></div>
+      <div class="logo-modal-card"><img src="assets/branding/Cabana.png" alt="Cabana logo" /></div>
+      <div class="logo-modal-card"><img src="assets/branding/Fadi.png" alt="Fadi logo" /></div>
+      <div class="logo-modal-card"><img src="assets/branding/caller-tech.png" alt="Caller Tech logo" /></div>
+      <div class="logo-modal-card"><img src="assets/branding/Hayat New.png" alt="Hayat logo" /></div>
+      <div class="logo-modal-card"><img src="assets/branding/LOGO_TUNE.png" alt="Tune logo" /></div>
+      <div class="logo-modal-card"><img src="assets/branding/LSC.png" alt="LSC logo" /></div>
+      <div class="logo-modal-card"><img src="assets/branding/shi-wow.png" alt="Shi Wow logo" /></div>
+      <div class="logo-modal-card"><img src="assets/branding/Logo_La_Fiesta_Transp_bg-01.png" alt="La Fiesta logo" /></div>
+      <div class="logo-modal-card"><img src="assets/branding/MArketing Minds.png" alt="Marketing Minds logo" /></div>
+      <div class="logo-modal-card"><img src="assets/branding/Marionette.png" alt="Marionette logo" /></div>
+      <div class="logo-modal-card"><img src="assets/branding/PBA.png" alt="PBA logo" /></div>
+      <div class="logo-modal-card"><img src="assets/branding/POOL BAR LOGO.png" alt="Pool Bar logo" /></div>
+      <div class="logo-modal-card"><img src="assets/branding/lubby.png" alt="Lubby logo" /></div>
+      <div class="logo-modal-card"><img src="assets/branding/Volume 1.png" alt="Volume 1 logo" /></div>
+      <div class="logo-modal-card"><img src="assets/branding/Waad Logo-Transparent-02.png" alt="Waad logo" /></div>
+      <div class="logo-modal-card"><img src="assets/branding/chassis.png" alt="Chassis logo" /></div>
+      <div class="logo-modal-card"><img src="assets/branding/dessert district.png" alt="Dessert District logo" /></div>
+      <div class="logo-modal-card"><img src="assets/branding/dj nonz.png" alt="DJ Nonz logo" /></div>
+      <div class="logo-modal-card"><img src="assets/branding/hawa batroun.png" alt="Hawa Batroun logo" /></div>
+      <div class="logo-modal-card"><img src="assets/branding/hikaya.png" alt="Hikaya logo" /></div>
+      <div class="logo-modal-card"><img src="assets/branding/jaax.png" alt="Jaax logo" /></div>
+      <div class="logo-modal-card"><img src="assets/branding/jelies.png" alt="Jelies logo" /></div>
+      <div class="logo-modal-card"><img src="assets/branding/miracle d'olive.png" alt="Miracle d'olive logo" /></div>
+      <div class="logo-modal-card"><img src="assets/branding/noon.png" alt="Noon logo" /></div>
+      <div class="logo-modal-card"><img src="assets/branding/sam-hindy.ico" alt="Brand logo" /></div>
+      <div class="logo-modal-card"><img src="assets/branding/siso original.png" alt="Siso original logo" /></div>
+      <div class="logo-modal-card"><img src="assets/branding/siso xmas.png" alt="Siso Xmas logo" /></div>
     </div>
   </div>
+</div>
 
-   <!-- Branding pop up -->
-  <div class="gallery-modal" id="campaignsModal" aria-hidden="true">
-    <div class="gallery-modal-overlay" data-gallery-close></div>
+<!-- Branding Popup Modal -->
+<div class="gallery-modal" id="campaignsModal" aria-hidden="true">
+  <div class="gallery-modal-overlay" data-gallery-close></div>
 
-    <div class="gallery-modal-dialog" role="dialog" aria-modal="true" aria-label="Campaigns gallery popup">
-      <button class="gallery-modal-close" type="button" data-gallery-close aria-label="Close campaigns gallery">
-        <i class="fa-solid fa-xmark"></i>
-      </button>
+  <div class="gallery-modal-dialog" role="dialog" aria-modal="true" aria-label="Brand identity gallery popup">
+    <button class="gallery-modal-close" type="button" data-gallery-close aria-label="Close brand identity gallery">
+      <i class="fa-solid fa-xmark"></i>
+    </button>
 
-      <div class="gallery-modal-head">
-        <p class="gallery-modal-kicker">Brand Identity Systems</p>
-        <h2>Campaign visuals and marketing creatives</h2>
-        <p>Complete brand identity systems including brand guidelines, visual direction, color palettes, typography, and structured design assets that ensure consistency across all platforms.</p>
-      </div>
+    <div class="gallery-modal-head">
+      <p class="gallery-modal-kicker">Brand Identity Systems</p>
+      <h2>Brand systems and visual direction</h2>
+      <p>
+        Complete brand identity systems including guidelines, visual direction, color palettes, typography, and structured design assets that ensure consistency across all platforms.
+      </p>
+    </div>
 
-      <div class="gallery-modal-grid">
-        <div class="gallery-modal-card"><img src="assets/work/branding/Branding-01.png" alt="Campaign work 6" /></div>
-        <div class="gallery-modal-card"><img src="assets/work/branding/Branding-02.png" alt="Campaign work 6" /></div>
-        <div class="gallery-modal-card"><img src="assets/work/branding/Branding-03.png" alt="Campaign work 6" /></div>
-        <div class="gallery-modal-card"><img src="assets/work/branding/Branding-04.png" alt="Campaign work 6" /></div>
-        <div class="gallery-modal-card"><img src="assets/work/branding/Hikaya-01.png" alt="Campaign work 1" /></div>
-        <div class="gallery-modal-card"><img src="assets/work/branding/Hikaya-02.png" alt="Campaign work 2" /></div>
-        <div class="gallery-modal-card"><img src="assets/work/branding/Hikaya-03.jpg" alt="Campaign work 3" /></div>
-        <div class="gallery-modal-card"><img src="assets/work/branding/Hikaya-04.jpg" alt="Campaign work 4" /></div>
-        <div class="gallery-modal-card"><img src="assets/work/branding/noun1.png" alt="Campaign work 5" /></div>
-        <div class="gallery-modal-card"><img src="assets/work/branding/noun2.png" alt="Campaign work 6" /></div>
-        <div class="gallery-modal-card"><img src="assets/work/branding/noun3.png" alt="Campaign work 6" /></div>
-        <div class="gallery-modal-card"><img src="assets/work/branding/noun4.png" alt="Campaign work 6" /></div>
-        <div class="gallery-modal-card"><img src="assets/work/branding/siso1.png" alt="Campaign work 6" /></div>
-        <div class="gallery-modal-card"><img src="assets/work/branding/siso2.png" alt="Campaign work 6" /></div>
-        <div class="gallery-modal-card"><img src="assets/work/branding/siso3.png" alt="Campaign work 6" /></div>
-        <div class="gallery-modal-card"><img src="assets/work/branding/siso4.png" alt="Campaign work 6" /></div>
-        <div class="gallery-modal-card"><img src="assets/work/branding/volume1.png" alt="Campaign work 6" /></div>
-        <div class="gallery-modal-card"><img src="assets/work/branding/volume2.png" alt="Campaign work 6" /></div>
-        <div class="gallery-modal-card"><img src="assets/work/branding/volume3.png" alt="Campaign work 6" /></div>
-        <div class="gallery-modal-card"><img src="assets/work/branding/volume4.png" alt="Campaign work 6" /></div>
-      </div>
+    <div class="gallery-modal-grid">
+      <div class="gallery-modal-card"><img src="assets/work/branding/Branding-01.png" alt="Brand system 1" /></div>
+      <div class="gallery-modal-card"><img src="assets/work/branding/Branding-02.png" alt="Brand system 2" /></div>
+      <div class="gallery-modal-card"><img src="assets/work/branding/Branding-03.png" alt="Brand system 3" /></div>
+      <div class="gallery-modal-card"><img src="assets/work/branding/Branding-04.png" alt="Brand system 4" /></div>
+      <div class="gallery-modal-card"><img src="assets/work/branding/Hikaya-01.png" alt="Hikaya branding 1" /></div>
+      <div class="gallery-modal-card"><img src="assets/work/branding/Hikaya-02.png" alt="Hikaya branding 2" /></div>
+      <div class="gallery-modal-card"><img src="assets/work/branding/Hikaya-03.jpg" alt="Hikaya branding 3" /></div>
+      <div class="gallery-modal-card"><img src="assets/work/branding/Hikaya-04.jpg" alt="Hikaya branding 4" /></div>
+      <div class="gallery-modal-card"><img src="assets/work/branding/noun1.png" alt="Noon branding 1" /></div>
+      <div class="gallery-modal-card"><img src="assets/work/branding/noun2.png" alt="Noon branding 2" /></div>
+      <div class="gallery-modal-card"><img src="assets/work/branding/noun3.png" alt="Noon branding 3" /></div>
+      <div class="gallery-modal-card"><img src="assets/work/branding/noun4.png" alt="Noon branding 4" /></div>
+      <div class="gallery-modal-card"><img src="assets/work/branding/siso1.png" alt="Siso branding 1" /></div>
+      <div class="gallery-modal-card"><img src="assets/work/branding/siso2.png" alt="Siso branding 2" /></div>
+      <div class="gallery-modal-card"><img src="assets/work/branding/siso3.png" alt="Siso branding 3" /></div>
+      <div class="gallery-modal-card"><img src="assets/work/branding/siso4.png" alt="Siso branding 4" /></div>
+      <div class="gallery-modal-card"><img src="assets/work/branding/volume1.png" alt="Volume branding 1" /></div>
+      <div class="gallery-modal-card"><img src="assets/work/branding/volume2.png" alt="Volume branding 2" /></div>
+      <div class="gallery-modal-card"><img src="assets/work/branding/volume3.png" alt="Volume branding 3" /></div>
+      <div class="gallery-modal-card"><img src="assets/work/branding/volume4.png" alt="Volume branding 4" /></div>
     </div>
   </div>
+</div>
 
-  <!-- Social Media Popup Modal -->
-  <div class="gallery-modal" id="socialMediaModal" aria-hidden="true">
-    <div class="gallery-modal-overlay" data-gallery-close></div>
+<!-- Social Media Popup Modal -->
+<div class="gallery-modal" id="socialMediaModal" aria-hidden="true">
+  <div class="gallery-modal-overlay" data-gallery-close></div>
 
-    <div class="gallery-modal-dialog" role="dialog" aria-modal="true" aria-label="Social media gallery popup">
-      <button class="gallery-modal-close" type="button" data-gallery-close aria-label="Close social media gallery">
-        <i class="fa-solid fa-xmark"></i>
-      </button>
+  <div class="gallery-modal-dialog" role="dialog" aria-modal="true" aria-label="Social media gallery popup">
+    <button class="gallery-modal-close" type="button" data-gallery-close aria-label="Close social media gallery">
+      <i class="fa-solid fa-xmark"></i>
+    </button>
 
-      <div class="gallery-modal-head">
-        <p class="gallery-modal-kicker">Social Media</p>
-        <h2>Social media content and page visuals</h2>
-        <p>A wider look at selected social media work created for different brands and campaigns.</p>
-      </div>
+    <div class="gallery-modal-head">
+      <p class="gallery-modal-kicker">Social Media</p>
+      <h2>Social media content and page visuals</h2>
+      <p>
+        A wider look at selected social media work created for different brands and campaigns.
+      </p>
+    </div>
 
-      <div class="gallery-modal-grid">
-        <div class="gallery-modal-card"><img src="assets/work/social-media/taha1.png" alt="Social media work 1" /></div>
-        <div class="gallery-modal-card"><img src="assets/work/social-media/taha2.png" alt="Social media work 2" /></div>
-        <div class="gallery-modal-card"><img src="assets/work/social-media/taha3.png" alt="Social media work 3" /></div>
-        <div class="gallery-modal-card"><img src="assets/work/social-media/taha4.png" alt="Social media work 4" /></div>
-        <div class="gallery-modal-card"><img src="assets/work/social-media/taha5.png" alt="Social media work 5" /></div>
-        <div class="gallery-modal-card"><img src="assets/work/social-media/combo-02.png" alt="Social media work 6" /></div>
-        <div class="gallery-modal-card"><img src="assets/work/social-media/ESCALOP-01.png" alt="Social media work 6" /></div>
-        <div class="gallery-modal-card"><img src="assets/work/social-media/fweri8-01.png" alt="Social media work 6" /></div>
-        <div class="gallery-modal-card"><img src="assets/work/social-media/suhoor-02.png" alt="Social media work 6" /></div>
-        <div class="gallery-modal-card"><img src="assets/work/social-media/Caroussel+Advices-05.png" alt="Social media work 6" /></div>
-        <div class="gallery-modal-card"><img src="assets/work/social-media/Christmas-0335+[Converted]-01.png" alt="Social media work 6" /></div>
-        <div class="gallery-modal-card"><img src="assets/work/social-media/crazy+show-01.png" alt="Social media work 6" /></div>
-        <div class="gallery-modal-card"><img src="assets/work/social-media/MINI+STUDIO-01.png" alt="Social media work 6" /></div>
-        <div class="gallery-modal-card"><img src="assets/work/social-media/xmas1.png" alt="Social media work 6" /></div>
-        <div class="gallery-modal-card"><img src="assets/work/social-media/supermarket.png" alt="Social media work 6" /></div>
-        <div class="gallery-modal-card"><img src="assets/work/social-media/oil.png" alt="Social media work 6" /></div>
-        <div class="gallery-modal-card"><img src="assets/work/social-media/persil.png" alt="Social media work 6" /></div>
-        <div class="gallery-modal-card"><img src="assets/work/social-media/tomatosauce.png" alt="Social media work 6" /></div>
-        <div class="gallery-modal-card"><img src="assets/work/social-media/tune1.png" alt="Social media work 6" /></div>
-        <div class="gallery-modal-card"><img src="assets/work/social-media/tune2.png" alt="Social media work 6" /></div>
-        <div class="gallery-modal-card"><img src="assets/work/social-media/tune3.png" alt="Social media work 6" /></div>
-        <div class="gallery-modal-card"><img src="assets/work/social-media/tune4.png" alt="Social media work 6" /></div>
-        <div class="gallery-modal-card"><img src="assets/work/social-media/tune5.png" alt="Social media work 6" /></div>
-        <div class="gallery-modal-card"><img src="assets/work/social-media/tinos.png" alt="Social media work 6" /></div>
-        <div class="gallery-modal-card"><img src="assets/work/social-media/hikaya1.png" alt="Social media work 6" /></div>
-        <div class="gallery-modal-card"><img src="assets/work/social-media/Untitled-1+[Recovered]-06.png" alt="Social media work 6" /></div>
-        <div class="gallery-modal-card"><img src="assets/work/social-media/Untitled-1+[Recovered]-08.png" alt="Social media work 6" /></div>
-        <div class="gallery-modal-card"><img src="assets/work/social-media/Untitled-1+[Recovered]-09.png" alt="Social media work 6" /></div>
-        <div class="gallery-modal-card"><img src="assets/work/social-media/Untitled-1-06.png" alt="Social media work 6" /></div>
-        <div class="gallery-modal-card"><img src="assets/work/social-media/Untitled-1-01.png" alt="Social media work 6" /></div>
-        <div class="gallery-modal-card"><img src="assets/work/social-media/Untitled-1-02.png" alt="Social media work 6" /></div>
-        <div class="gallery-modal-card"><img src="assets/work/social-media/Untitled-1-03.png" alt="Social media work 6" /></div>
-        <div class="gallery-modal-card"><img src="assets/work/social-media/Untitled-1-04.png" alt="Social media work 6" /></div>
-        <div class="gallery-modal-card"><img src="assets/work/social-media/Untitled-1-05.png" alt="Social media work 6" /></div>
-        <div class="gallery-modal-card"><img src="assets/work/social-media/noun1.jpg" alt="Social media work 6" /></div>
-        <div class="gallery-modal-card"><img src="assets/work/social-media/Noon Recovery-03.png" alt="Social media work 6" /></div>
-        <div class="gallery-modal-card"><img src="assets/work/social-media/Noon Recovery-08.png" alt="Social media work 6" /></div>
-        <div class="gallery-modal-card"><img src="assets/work/social-media/noon Recovery1-10.png" alt="Social media work 6" /></div>
-        <div class="gallery-modal-card"><img src="assets/work/social-media/lADIES NIGHT-01.png" alt="Social media work 6" /></div>
-        <div class="gallery-modal-card"><img src="assets/work/social-media/Lounge-01.png" alt="Social media work 6" /></div>
-        <div class="gallery-modal-card"><img src="assets/work/social-media/Pizza Lounge-01.png" alt="Social media work 6" /></div>
-
-      </div>
+    <div class="gallery-modal-grid">
+      <div class="gallery-modal-card"><img src="assets/work/social-media/taha1.png" alt="Social media work 1" /></div>
+      <div class="gallery-modal-card"><img src="assets/work/social-media/taha2.png" alt="Social media work 2" /></div>
+      <div class="gallery-modal-card"><img src="assets/work/social-media/taha3.png" alt="Social media work 3" /></div>
+      <div class="gallery-modal-card"><img src="assets/work/social-media/taha4.png" alt="Social media work 4" /></div>
+      <div class="gallery-modal-card"><img src="assets/work/social-media/taha5.png" alt="Social media work 5" /></div>
+      <div class="gallery-modal-card"><img src="assets/work/social-media/combo-02.png" alt="Social media work 6" /></div>
+      <div class="gallery-modal-card"><img src="assets/work/social-media/ESCALOP-01.png" alt="Social media work 7" /></div>
+      <div class="gallery-modal-card"><img src="assets/work/social-media/fweri8-01.png" alt="Social media work 8" /></div>
+      <div class="gallery-modal-card"><img src="assets/work/social-media/suhoor-02.png" alt="Social media work 9" /></div>
+      <div class="gallery-modal-card"><img src="assets/work/social-media/Caroussel+Advices-05.png" alt="Social media work 10" /></div>
+      <div class="gallery-modal-card"><img src="assets/work/social-media/Christmas-0335+[Converted]-01.png" alt="Social media work 11" /></div>
+      <div class="gallery-modal-card"><img src="assets/work/social-media/crazy+show-01.png" alt="Social media work 12" /></div>
+      <div class="gallery-modal-card"><img src="assets/work/social-media/MINI+STUDIO-01.png" alt="Social media work 13" /></div>
+      <div class="gallery-modal-card"><img src="assets/work/social-media/xmas1.png" alt="Social media work 14" /></div>
+      <div class="gallery-modal-card"><img src="assets/work/social-media/supermarket.png" alt="Social media work 15" /></div>
+      <div class="gallery-modal-card"><img src="assets/work/social-media/oil.png" alt="Social media work 16" /></div>
+      <div class="gallery-modal-card"><img src="assets/work/social-media/persil.png" alt="Social media work 17" /></div>
+      <div class="gallery-modal-card"><img src="assets/work/social-media/tomatosauce.png" alt="Social media work 18" /></div>
+      <div class="gallery-modal-card"><img src="assets/work/social-media/tune1.png" alt="Social media work 19" /></div>
+      <div class="gallery-modal-card"><img src="assets/work/social-media/tune2.png" alt="Social media work 20" /></div>
+      <div class="gallery-modal-card"><img src="assets/work/social-media/tune3.png" alt="Social media work 21" /></div>
+      <div class="gallery-modal-card"><img src="assets/work/social-media/tune4.png" alt="Social media work 22" /></div>
+      <div class="gallery-modal-card"><img src="assets/work/social-media/tune5.png" alt="Social media work 23" /></div>
+      <div class="gallery-modal-card"><img src="assets/work/social-media/tinos.png" alt="Social media work 24" /></div>
+      <div class="gallery-modal-card"><img src="assets/work/social-media/hikaya1.png" alt="Social media work 25" /></div>
+      <div class="gallery-modal-card"><img src="assets/work/social-media/Untitled-1+[Recovered]-06.png" alt="Social media work 26" /></div>
+      <div class="gallery-modal-card"><img src="assets/work/social-media/Untitled-1+[Recovered]-08.png" alt="Social media work 27" /></div>
+      <div class="gallery-modal-card"><img src="assets/work/social-media/Untitled-1+[Recovered]-09.png" alt="Social media work 28" /></div>
+      <div class="gallery-modal-card"><img src="assets/work/social-media/Untitled-1-06.png" alt="Social media work 29" /></div>
+      <div class="gallery-modal-card"><img src="assets/work/social-media/Untitled-1-01.png" alt="Social media work 30" /></div>
+      <div class="gallery-modal-card"><img src="assets/work/social-media/Untitled-1-02.png" alt="Social media work 31" /></div>
+      <div class="gallery-modal-card"><img src="assets/work/social-media/Untitled-1-03.png" alt="Social media work 32" /></div>
+      <div class="gallery-modal-card"><img src="assets/work/social-media/Untitled-1-04.png" alt="Social media work 33" /></div>
+      <div class="gallery-modal-card"><img src="assets/work/social-media/Untitled-1-05.png" alt="Social media work 34" /></div>
+      <div class="gallery-modal-card"><img src="assets/work/social-media/noun1.jpg" alt="Social media work 35" /></div>
+      <div class="gallery-modal-card"><img src="assets/work/social-media/Noon Recovery-03.png" alt="Social media work 36" /></div>
+      <div class="gallery-modal-card"><img src="assets/work/social-media/Noon Recovery-08.png" alt="Social media work 37" /></div>
+      <div class="gallery-modal-card"><img src="assets/work/social-media/noon Recovery1-10.png" alt="Social media work 38" /></div>
+      <div class="gallery-modal-card"><img src="assets/work/social-media/lADIES NIGHT-01.png" alt="Social media work 39" /></div>
+      <div class="gallery-modal-card"><img src="assets/work/social-media/Lounge-01.png" alt="Social media work 40" /></div>
+      <div class="gallery-modal-card"><img src="assets/work/social-media/Pizza Lounge-01.png" alt="Social media work 41" /></div>
     </div>
   </div>
+</div>
 
-  <!-- Carousels Popup Modal -->
+<!-- Carousels Popup Modal -->
 <div class="gallery-modal" id="carouselsModal" aria-hidden="true">
   <div class="gallery-modal-overlay" data-gallery-close></div>
 
@@ -818,14 +820,15 @@ Our work focuses on creating visual systems that make businesses look more profe
       <div class="gallery-modal-card"><img src="assets/work/carousels/Caroussel+Advices-05.png" alt="Carousel design 16" /></div>
       <div class="gallery-modal-card"><img src="assets/work/carousels/Posts Arts (1)-01.png" alt="Carousel design 17" /></div>
       <div class="gallery-modal-card"><img src="assets/work/carousels/Posts Arts (1)-02.png" alt="Carousel design 18" /></div>
-      <div class="gallery-modal-card"><img src="assets/work/carousels/Posts Arts (1)-03.png" alt="Carousel design 5" /></div>
-      <div class="gallery-modal-card"><img src="assets/work/carousels/Posts Arts (1)-04.png" alt="Carousel design 5" /></div>
-      <div class="gallery-modal-card"><img src="assets/work/carousels/Posts Arts (1)-05.png" alt="Carousel design 5" /></div>
-      <div class="gallery-modal-card"><img src="assets/work/carousels/Posts Arts (1)-06.png" alt="Carousel design 5" /></div>
-      <div class="gallery-modal-card"><img src="assets/work/carousels/Gift Caroussel-01.png" alt="Carousel design 5" /></div>
-      <div class="gallery-modal-card"><img src="assets/work/carousels/Gift Caroussel-02.png" alt="Carousel design 5" /></div>
-      <div class="gallery-modal-card"><img src="assets/work/carousels/Gift Caroussel-03.png" alt="Carousel design 5" /></div>
-      <div class="gallery-modal-card"><img src="assets/work/carousels/Gift Caroussel-04.png" alt="Carousel design 5" /></div>
+      <div class="gallery-modal-card"><img src="assets/work/carousels/Posts Arts (1)-03.png" alt="Carousel design 19" /></div>
+      <div class="gallery-modal-card"><img src="assets/work/carousels/Posts Arts (1)-04.png" alt="Carousel design 20" /></div>
+      <div class="gallery-modal-card"><img src="assets/work/carousels/Posts Arts (1)-05.png" alt="Carousel design 21" /></div>
+      <div class="gallery-modal-card"><img src="assets/work/carousels/Posts Arts (1)-06.png" alt="Carousel design 22" /></div>
+      <div class="gallery-modal-card"><img src="assets/work/carousels/Gift Caroussel-01.png" alt="Carousel design 23" /></div>
+      <div class="gallery-modal-card"><img src="assets/work/carousels/Gift Caroussel-02.png" alt="Carousel design 24" /></div>
+      <div class="gallery-modal-card"><img src="assets/work/carousels/Gift Caroussel-03.png" alt="Carousel design 25" /></div>
+      <div class="gallery-modal-card"><img src="assets/work/carousels/Gift Caroussel-04.png" alt="Carousel design 26" /></div>
+    </div>
   </div>
 </div>
 
@@ -872,9 +875,6 @@ Our work focuses on creating visual systems that make businesses look more profe
     </div>
   </div>
 </div>
-
- 
-
 
   <script src="main.js"></script>
 
