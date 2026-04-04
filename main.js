@@ -1,4 +1,37 @@
 document.addEventListener("DOMContentLoaded", () => {
+  /* ================= SHARED MODAL HELPERS ================= */
+  const updateBodyModalState = () => {
+    const hasActiveModal = document.querySelector(
+      ".terms-modal.active, .collab-modal.active, .logo-modal.active, .gallery-modal.active"
+    );
+    document.body.classList.toggle("modal-open", !!hasActiveModal);
+  };
+
+  const openModal = (modal) => {
+    if (!modal) return;
+    modal.classList.add("active");
+    modal.setAttribute("aria-hidden", "false");
+    updateBodyModalState();
+  };
+
+  const closeModal = (modal) => {
+    if (!modal) return;
+    modal.classList.remove("active");
+    modal.setAttribute("aria-hidden", "true");
+    updateBodyModalState();
+  };
+
+  const closeAllModals = () => {
+    document
+      .querySelectorAll(".terms-modal.active, .collab-modal.active, .logo-modal.active, .gallery-modal.active")
+      .forEach((modal) => {
+        modal.classList.remove("active");
+        modal.setAttribute("aria-hidden", "true");
+      });
+
+    updateBodyModalState();
+  };
+
   /* ================= MENU TOGGLE ================= */
   const menuToggle = document.querySelector(".menu-toggle");
   const mainNav = document.querySelector(".main-nav");
@@ -24,35 +57,20 @@ document.addEventListener("DOMContentLoaded", () => {
   const termsCloseButtons = document.querySelectorAll("[data-terms-close]");
 
   if (termsModal) {
-    const openTermsModal = () => {
-      termsModal.classList.add("active");
-      termsModal.setAttribute("aria-hidden", "false");
-      document.body.classList.add("modal-open");
-    };
-
-    const closeTermsModal = () => {
-      termsModal.classList.remove("active");
-      termsModal.setAttribute("aria-hidden", "true");
-      document.body.classList.remove("modal-open");
-    };
-
     termsOpenButtons.forEach((button) => {
-      button.addEventListener("click", openTermsModal);
+      button.addEventListener("click", () => openModal(termsModal));
     });
 
     termsCloseButtons.forEach((button) => {
-      button.addEventListener("click", closeTermsModal);
-    });
-
-    document.addEventListener("keydown", (event) => {
-      if (event.key === "Escape" && termsModal.classList.contains("active")) {
-        closeTermsModal();
-      }
+      button.addEventListener("click", () => closeModal(termsModal));
     });
 
     termsModal.addEventListener("click", (event) => {
-      if (event.target.matches("[data-terms-close]")) {
-        closeTermsModal();
+      if (
+        event.target === termsModal ||
+        event.target.matches("[data-terms-close]")
+      ) {
+        closeModal(termsModal);
       }
     });
   }
@@ -159,72 +177,14 @@ ${projectDetails}`;
           </a>
         </div>
       </div>
-    `,
-
-    production: `
-      <div class="collab-modal-header">
-        <p class="collab-modal-kicker">Collaboration Overview</p>
-        <h2>Saad Ramadan Production</h2>
-        <p class="collab-modal-lead">
-          Media production and visual storytelling that elevate campaigns and brand presence.
-        </p>
-      </div>
-
-      <div class="collab-modal-body">
-        <p>
-          This collaboration focuses on strengthening Colart’s visual output through professional photography
-          and media production. It helps transform brand ideas into stronger campaign visuals and content assets.
-        </p>
-
-        <p>
-          Through this partnership, Colart is able to support clients with higher-quality visual production
-          that works across social media, campaigns, launches, and branded content.
-        </p>
-
-        <div class="collab-modal-grid">
-          <div class="collab-modal-block">
-            <h3>What This Collaboration Supports</h3>
-            <ul>
-              <li>Photography for products, spaces, and campaigns</li>
-              <li>Visual storytelling with stronger production quality</li>
-              <li>Content creation that feels more refined</li>
-              <li>Brand visuals built for marketing impact</li>
-            </ul>
-          </div>
-
-          <div class="collab-modal-block">
-            <h3>Why it matters</h3>
-            <ul>
-              <li>Stronger content quality</li>
-              <li>Better storytelling</li>
-              <li>More polished campaigns</li>
-              <li>Higher visual standards</li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="collab-modal-note">
-          <strong>Why it works:</strong>
-          strong branding needs strong visuals, and production quality directly impacts perception.
-        </div>
-      </div>
     `
   };
 
   if (collabModal && collabModalContent) {
     const openCollabModal = (key) => {
       if (!collabData[key]) return;
-
       collabModalContent.innerHTML = collabData[key];
-      collabModal.classList.add("active");
-      collabModal.setAttribute("aria-hidden", "false");
-      document.body.classList.add("modal-open");
-    };
-
-    const closeCollabModal = () => {
-      collabModal.classList.remove("active");
-      collabModal.setAttribute("aria-hidden", "true");
-      document.body.classList.remove("modal-open");
+      openModal(collabModal);
     };
 
     collabOpenButtons.forEach((button) => {
@@ -235,18 +195,15 @@ ${projectDetails}`;
     });
 
     collabCloseButtons.forEach((button) => {
-      button.addEventListener("click", closeCollabModal);
-    });
-
-    document.addEventListener("keydown", (event) => {
-      if (event.key === "Escape" && collabModal.classList.contains("active")) {
-        closeCollabModal();
-      }
+      button.addEventListener("click", () => closeModal(collabModal));
     });
 
     collabModal.addEventListener("click", (event) => {
-      if (event.target.matches("[data-collab-close]")) {
-        closeCollabModal();
+      if (
+        event.target === collabModal ||
+        event.target.matches("[data-collab-close]")
+      ) {
+        closeModal(collabModal);
       }
     });
   }
@@ -257,90 +214,60 @@ ${projectDetails}`;
   const logoCloseButtons = document.querySelectorAll("[data-logo-close]");
 
   if (logoModal) {
-    const openLogoModal = () => {
-      logoModal.classList.add("active");
-      logoModal.setAttribute("aria-hidden", "false");
-      document.body.classList.add("modal-open");
-    };
-
-    const closeLogoModal = () => {
-      logoModal.classList.remove("active");
-      logoModal.setAttribute("aria-hidden", "true");
-      document.body.classList.remove("modal-open");
-    };
-
     logoOpenButtons.forEach((button) => {
-      button.addEventListener("click", openLogoModal);
+      button.addEventListener("click", () => openModal(logoModal));
     });
 
     logoCloseButtons.forEach((button) => {
-      button.addEventListener("click", closeLogoModal);
-    });
-
-    document.addEventListener("keydown", (event) => {
-      if (event.key === "Escape" && logoModal.classList.contains("active")) {
-        closeLogoModal();
-      }
+      button.addEventListener("click", () => closeModal(logoModal));
     });
 
     logoModal.addEventListener("click", (event) => {
-      if (event.target.matches("[data-logo-close]")) {
-        closeLogoModal();
+      if (
+        event.target === logoModal ||
+        event.target.matches("[data-logo-close]")
+      ) {
+        closeModal(logoModal);
       }
     });
   }
 
   /* ================= GALLERY MODALS ================= */
   const galleryButtons = document.querySelectorAll("[data-gallery-open]");
+  const galleryCloseButtons = document.querySelectorAll("[data-gallery-close]");
+  const galleryModals = document.querySelectorAll(".gallery-modal");
 
   galleryButtons.forEach((button) => {
     button.addEventListener("click", () => {
       const modalId = button.getAttribute("data-gallery-open");
       const modal = document.getElementById(modalId);
-
-      if (!modal) return;
-
-      modal.classList.add("active");
-      modal.setAttribute("aria-hidden", "false");
-      document.body.classList.add("modal-open");
+      openModal(modal);
     });
   });
 
-  const allGalleryCloseButtons = document.querySelectorAll("[data-gallery-close]");
-
-  allGalleryCloseButtons.forEach((button) => {
+  galleryCloseButtons.forEach((button) => {
     button.addEventListener("click", () => {
       const modal = button.closest(".gallery-modal");
-
-      if (!modal) return;
-
-      modal.classList.remove("active");
-      modal.setAttribute("aria-hidden", "true");
-      document.body.classList.remove("modal-open");
+      closeModal(modal);
     });
   });
 
-  document.addEventListener("keydown", (event) => {
-    if (event.key === "Escape") {
-      const activeGallery = document.querySelector(".gallery-modal.active");
-      if (activeGallery) {
-        activeGallery.classList.remove("active");
-        activeGallery.setAttribute("aria-hidden", "true");
-        document.body.classList.remove("modal-open");
-      }
-    }
-  });
-
-  document.querySelectorAll(".gallery-modal").forEach((modal) => {
+  galleryModals.forEach((modal) => {
     modal.addEventListener("click", (event) => {
       if (
         event.target === modal ||
+        event.target.matches(".gallery-modal-overlay") ||
         event.target.matches("[data-gallery-close]")
       ) {
-        modal.classList.remove("active");
-        modal.setAttribute("aria-hidden", "true");
-        document.body.classList.remove("modal-open");
+        closeModal(modal);
       }
     });
+  });
+
+  /* ================= GLOBAL ESC CLOSE ================= */
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape") {
+      closeAllModals();
+    }
   });
 });
